@@ -1,14 +1,7 @@
-"""Everything that protects the real OpenRouter API: hard request limits, a persistent
-request counter (data/api_usage.json) and a response cache (data/api_cache.json).
+"""Protects the real OpenRouter API: request limits, a saved counter and a response cache.
 
-Every OpenRouter request goes through request() below, in this order:
-  1. cache:  a saved answer for the exact same request is reused (no call, not counted)
-  2. limits: refuse if this model or the whole experiment has used up its requests
-  3. count:  add one request and save it to disk BEFORE sending, so a crash still counts it
-  4. send:   make the HTTP call, record its cost, save the response to the cache
-
-A dry run does steps 1 to 3 on a copy of the counts that is never saved, and then
-makes up a reply instead of step 4, so no HTTP call is ever made.
+Every request goes through request(): cache -> limits -> count (saved before sending) -> send.
+A dry run does the same on a copy of the counts and never sends anything.
 """
 
 import hashlib
@@ -20,7 +13,7 @@ from backend.adapters.base import AdapterError, openrouter_headers, post_json
 
 
 class CallLimitReached(Exception):
-    """A request was refused because a limit is used up. Not an AdapterError, so it is never retried."""
+    """A limit is used up. Not an AdapterError, so it is never retried."""
 
 
 # ---- Small JSON file helpers ----
@@ -32,7 +25,7 @@ def read_json(path, default):
 
 
 def write_json(path, data):
-    # Write to a temp file first, then swap it in, so the file is never left half written.
+    # Write a temp file, then swap it in, so the file is never half written.
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_suffix(".tmp")
     temp.write_text(json.dumps(data, indent=2), encoding="utf-8")
@@ -76,7 +69,7 @@ def max_calls_next_race(usage: dict) -> int:
 
 
 class Budget:
-    """Request counts used by one race. The real one re-reads and saves data/api_usage.json every time."""
+    """Request counts for one race. The real one always re-reads and saves api_usage.json."""
 
     def __init__(self, dry_run: bool = False):
         self.dry_run = dry_run
@@ -91,7 +84,7 @@ class Budget:
             write_json(config.API_USAGE_FILE, self.usage)
 
     def count_request(self, model_id: str) -> int:
-        """Check the limits, then count one request. Returns its number in the whole experiment."""
+        """Check the limits, then count one request. Returns its number overall."""
         self.refresh()
         used = self.usage["per_model"].get(model_id, 0)
         limit = config.request_limit(model_id)

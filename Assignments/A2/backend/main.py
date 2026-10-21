@@ -17,8 +17,7 @@ from backend.puzzles import load_puzzles
 
 app = FastAPI(title="Rubik's Cube Race")
 
-# Only one race or benchmark may call the models at a time.
-# `busy` says what is running, or is None when free.
+# Only one race or benchmark at a time. `busy` says what is running (None when free).
 busy = None
 benchmark_task = None
 benchmark_progress = {"running": False, "set": None, "done": 0, "total": 0, "current": None, "error": None}
@@ -107,7 +106,7 @@ def get_summary(set_name: str | None = Query(None, alias="set"), mode: str | Non
 
 @app.get("/api/dashboard")
 def get_dashboard(set_name: str = Query("primary", alias="set"), mode: str | None = None):
-    """Everything the dashboard page needs in one call. Shows the current mode's results by default."""
+    """Data for the results section. Shows the current mode by default."""
     mode = mode or config.active_mode()
     results = load_results_for_set(set_name, mode)
     summary = benchmark.summarize(results)
@@ -152,8 +151,7 @@ async def start_benchmark(set_name: str):
         raise HTTPException(409, "In OpenRouter mode, whole-set benchmarks are switched off. "
                                  "Use the race screen to run the openrouter puzzle once.")
 
-    # A full set can take a long time with real models, so it runs in the background.
-    # The page can follow it with GET /api/status.
+    # A whole set takes a while, so it runs in the background (the page follows /api/status).
     busy = f"benchmark on the {set_name} set"
     benchmark_task = asyncio.create_task(run_benchmark_set(set_name, puzzles))
     return {"message": f"Started benchmark on {len(puzzles)} {set_name} puzzles", "total": len(puzzles)}

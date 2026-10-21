@@ -1,10 +1,4 @@
-"""OpenRouter Decisions API adapter, used for Jev 1.13, GPT-6 Luna Decisions and Cloudflare Clef.
-
-We send one "choice" question whose 18 options are the moves. The wording is
-identical for all three models; only the model ID changes. The local Clef Flash
-model in Ollama gets exactly the same request. Every request goes through the
-api_guard (limits, counter, cache).
-"""
+"""OpenRouter Decisions API adapter (Jev, Luna, Clef): one choice question, the 18 moves are the options."""
 
 import random
 
@@ -33,10 +27,7 @@ def build_request(model_id: str, state: str, recent_moves: list[str]) -> dict:
 
 
 def parse_response(data: dict):
-    """Pull (move, confidence) out of a Decisions response. Update here if the API changes.
-
-    Expected shape: {"answers": {"next_move": {"type": "choice", "choice": "R", "confidence": 0.8}}}
-    """
+    """(move, confidence) from a Decisions answer, e.g. {"answers": {"next_move": {"choice": "R"}}}."""
     answer = data["answers"][QUESTION_KEY]
     return answer["choice"], answer.get("confidence")
 

@@ -55,7 +55,7 @@
   box-sizing: border-box;
 }
 
-/* Elements with the hidden attribute stay hidden even if a class gives them a display value */
+/* [hidden] always wins over a class's display value */
 [hidden] {
   display: none !important;
 }
@@ -66,7 +66,7 @@ body {
   background: var(--bg) var(--bg-gradient) fixed;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
-  /* Georgia's default digits go up and down like lowercase letters; lining digits read better in a UI */
+  /* Georgia's digits go up and down by default; lining digits read better */
   font-variant-numeric: lining-nums;
 }
 
@@ -240,7 +240,7 @@ select:disabled {
   box-shadow: none;
 }
 
-/* Tiny mode label next to the Run buttons */
+/* Tiny mode label next to the Mode dropdown */
 .mode-label {
   font-size: 12px;
   font-style: italic;
@@ -762,7 +762,7 @@ code {
 .net .face-B { grid-area: 2 / 4; }
 .net .face-D { grid-area: 3 / 2; }
 
-/* ---- Dashboard ---- */
+/* ---- Results section ---- */
 
 .card {
   background: var(--card);

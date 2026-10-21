@@ -13,10 +13,7 @@ def openrouter_adapters(dry_run: bool) -> list:
 
 
 def load_adapters(dry_run: bool = False) -> list:
-    """The four racers for the current mode (see MODE in config.py).
-
-    dry_run=True gives the OpenRouter lineup in any mode, but it never makes an HTTP call.
-    """
+    """The four racers for the current mode. dry_run=True: OpenRouter lineup, never an HTTP call."""
     if dry_run:
         return openrouter_adapters(dry_run=True)
     mode = config.active_mode()

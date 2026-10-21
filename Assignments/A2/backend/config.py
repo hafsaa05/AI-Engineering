@@ -9,9 +9,8 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RESULTS_DIR = PROJECT_ROOT / "results"
 load_dotenv(PROJECT_ROOT / ".env")
 
-# Which models race: "mock" (fake models), "ollama" (local models) or "openrouter" (real API models).
-# MODE in .env is only the starting value; the GUI can switch it while the server runs (POST /api/mode).
-# A key alone never turns on OpenRouter: it needs MODE=openrouter AND the key (see active_mode).
+# Which models race: "mock", "ollama" or "openrouter". .env only gives the starting mode (the GUI can switch it).
+# A key alone never turns on OpenRouter: it needs MODE=openrouter AND the key.
 MODES = ["mock", "ollama", "openrouter"]
 MODE = os.getenv("MODE", "ollama").strip().lower()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
@@ -38,7 +37,6 @@ API_CACHE_FILE = PROJECT_ROOT / "data" / "api_cache.json"
 OPENROUTER_SET = "openrouter"    # real races are only allowed on this puzzle set
 
 # max_requests = total requests this model may ever make (failed ones and retries count too).
-# Luna and Clef IDs still need checking once we have a key.
 MODELS = [
     {"name": "Jev 1.13", "model_id": "typesafe/jev-1.13", "api": "decisions", "max_requests": 20},
     {"name": "GPT-6 Luna Decisions", "model_id": "openai/gpt-6-luna-decisions", "api": "decisions", "max_requests": 20},
@@ -70,7 +68,7 @@ MOCK_MODELS = ["mock-random", "mock-oracle", "mock-noisy", "mock-broken"]
 
 
 def active_mode() -> str:
-    # OpenRouter is only used when asked for by name AND a key is set. Anything else falls back to mock.
+    # OpenRouter needs MODE=openrouter AND a key; anything else falls back to mock.
     if MODE == "ollama":
         return "ollama"
     if MODE == "openrouter" and OPENROUTER_API_KEY:

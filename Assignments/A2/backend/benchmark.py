@@ -1,8 +1,7 @@
-"""Runs the models on a puzzle, logs every move and saves the results.
+"""Runs models on puzzles, logs every move and saves the results.
 
-Usage from the project folder:
-    python -m backend.benchmark primary-1      # one puzzle
-    python -m backend.benchmark primary        # every puzzle in a set
+Usage: python -m backend.benchmark primary-1   (one puzzle)
+       python -m backend.benchmark primary     (a whole set)
 """
 
 import asyncio
@@ -89,16 +88,13 @@ def rank_results(results: list[dict]) -> list[dict]:
 
 LATE_GRACE = 0.5  # seconds; an answer that arrives later than timeout + this is not accepted
 
-# Per request logging fields from the api_guard (OpenRouter only; None for the other modes)
+# Logging fields from the api_guard (OpenRouter only, None otherwise)
 API_FIELDS = {"cache_hit": None, "api_latency": None, "cache_latency": None,
               "request_number": None, "cost": None, "dry_run": None}
 
 
 async def ask_once(adapter, state: str, recent_moves: list[str], timeout: float) -> dict:
-    """One model call, timed. Returns a log entry for this attempt.
-
-    CallLimitReached is not caught here: it must stop the model at once, not count as a failed call.
-    """
+    """One timed model call -> log entry. CallLimitReached is let through so the model stops at once."""
     start_time = time.perf_counter()
     result, failure, api_info = None, None, None
     try:
@@ -114,8 +110,7 @@ async def ask_once(adapter, state: str, recent_moves: list[str], timeout: float)
         failure = f"unexpected error: {e!r}"
     latency = time.perf_counter() - start_time
 
-    # The timeout is a hard rule: if the computer was paused (for example by sleep) and the
-    # answer only came in after the limit, it is not accepted.
+    # Hard timeout: an answer that came in late (e.g. after sleep) is not accepted.
     if result is not None and latency > timeout + LATE_GRACE:
         result, failure = None, f"answer came after the {timeout:.0f}s limit ({latency:.0f}s)"
 
@@ -167,7 +162,7 @@ async def run_model(adapter, puzzle: dict, race_id: str = "", on_event=None) -> 
     limit_message = None
     await emit(on_event, start_event(adapter.name, puzzle["id"], state))
 
-    # Every round either makes a move or ends the run, so MAX_MOVES + 1 rounds always reach an end reason.
+    # Each round makes a move or ends the run, so MAX_MOVES + 1 rounds are always enough.
     for _ in range(config.MAX_MOVES + 1):
         if is_solved(state):
             end_reason = SOLVED
@@ -277,12 +272,7 @@ def keep_awake():
 
 
 async def run_race(puzzle: dict, adapters=None, on_event=None, save=True) -> list[dict]:
-    """All models on the same puzzle, each with its own cube state.
-
-    Normally they run at the same time. Ollama models take turns, because a laptop
-    can only hold one local model in memory at once. Raises AdapterError with a clear
-    message if a model is not ready (for example Ollama is not running).
-    """
+    """All models on one puzzle. Ollama models take turns, since a laptop holds one model at a time."""
     adapters = adapters or load_adapters()
     for adapter in adapters:
         await adapter.check_ready()
@@ -313,7 +303,7 @@ async def run_race(puzzle: dict, adapters=None, on_event=None, save=True) -> lis
 # ---- Replay of a saved race ----
 
 def replay_timeline(results: list[dict]) -> list[tuple[float, dict]]:
-    """Rebuild every event of a saved race with the time it happened, using the recorded latencies."""
+    """Every event of a saved race with its time, rebuilt from the recorded latencies."""
     timeline = []
     for r in results:
         state, clock = r["start_state"], 0.0
@@ -368,7 +358,7 @@ def average(values):
 
 
 def summarize(results: list[dict]) -> list[dict]:
-    """One row of dashboard stats per model, in the order the models first appear."""
+    """One row of stats per model, in the order the models first appear."""
     by_model = {}
     for result in results:
         by_model.setdefault(result["model"], []).append(result)

@@ -8,8 +8,7 @@ from backend import config
 
 @pytest.fixture(autouse=True)
 def safe_test_setup(tmp_path, monkeypatch):
-    # 1. No network at all. Any real HTTP request from our code fails the test straight away.
-    #    (FastAPI's TestClient talks to the app in memory with a different client, so it still works.)
+    # 1. No network: any real HTTP request fails the test (TestClient works in memory, so it still works).
     async def no_network(*args, **kwargs):
         raise RuntimeError("network access is blocked in tests")
 

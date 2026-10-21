@@ -1,9 +1,7 @@
-"""Exact shortest solution using bidirectional BFS over all 18 moves.
+"""Exact shortest solution with bidirectional BFS over all 18 moves.
 
-We search forward from the scrambled state and backward from the solved state
-at the same time, one full layer at a time. When the two searches meet, the
-joined path is a shortest solution. Each side only has to go about half the
-depth, which keeps depth 5 or 6 fast.
+One search goes forward from the scramble and one backward from solved, a layer at a time.
+Where they meet is a shortest solution, and each side only goes about half as deep.
 """
 
 from backend.cube_engine import MOVES, SOLVED_STATE, apply_move, face_of, inverse_move

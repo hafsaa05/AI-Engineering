@@ -155,7 +155,7 @@ MODEL_IDS = {DecisionsAdapter: "typesafe/jev-1.13", ChatAdapter: "anthropic/clau
 
 
 def run_with_fake_response(monkeypatch, module, adapter_class, response):
-    # The fake replaces the HTTP call inside the api_guard, so nothing ever leaves the machine.
+    # The fake replaces the HTTP call, so nothing leaves the machine.
     async def fake_post_json(url, payload, headers=None, timeout=None):
         return response
 
@@ -295,7 +295,7 @@ def test_ollama_decision_model_gets_the_openrouter_question(monkeypatch):
     result = ask(OllamaDecisionAdapter("Clef Flash", "clef-flash:latest", "DECISION MODEL"), recent=HISTORY)
     assert result.valid and result.move == "R2" and result.confidence == 0.3
     assert calls[0]["url"] == f"{config.OLLAMA_URL}/v1/systemone"
-    # exactly the same request as the OpenRouter decision models, only the model name differs
+    # same request as the OpenRouter decision models, only the model name differs
     assert calls[0]["payload"] == decisions_adapter.build_request("clef-flash:latest", STATE, HISTORY)
 
 

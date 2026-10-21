@@ -1,6 +1,6 @@
-// Small helpers shared by the race page and the dashboard.
+// Small helpers used by app.js and dashboard.js.
 
-// One muted color per lane (model position), used for avatars and chart bars.
+// One color per lane (model position), for avatars and chart bars.
 const LANE_COLORS = ["#ff6b6b", "#3b9eff", "#14b8a6", "#ffa726"];  // coral, sky blue, teal, sunny orange
 const FONT = "Georgia, 'Times New Roman', serif";
 
@@ -24,7 +24,7 @@ async function getJson(url, options) {
   return data;
 }
 
-// Tiny mode label next to the Mode dropdown. OpenRouter is red so a paid race is never started by mistake.
+// Mode label next to the dropdown. OpenRouter is red so a paid race is never started by mistake.
 const MODE_LABELS = { mock: "Mock mode", ollama: "Local models, no API limits", openrouter: "Real API mode" };
 
 function showModeLabel(mode) {

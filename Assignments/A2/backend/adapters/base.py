@@ -1,8 +1,4 @@
-"""Shared pieces for every adapter: the result type, the prompt wording and the HTTP call.
-
-Every adapter has the same interface:
-    result = await adapter.get_move(state, recent_moves)
-"""
+"""Shared adapter pieces: the result type, the prompt wording and the HTTP call."""
 
 from dataclasses import dataclass
 from typing import Any
@@ -52,10 +48,10 @@ class Adapter:
     def retries(self) -> int:
         return config.MAX_RETRIES
 
-    # False: every attempt gets the full timeout. True: one timeout for the whole move, retries included.
+    # True (Ollama): one timeout covers the whole move, retries included.
     timeout_covers_retries = False
 
-    # Called before a race, and before and after a model's run, outside the timed part. Only Ollama uses them.
+    # Hooks around a run, outside the timed part (only Ollama uses them).
     async def check_ready(self) -> None:
         pass
 
@@ -67,7 +63,7 @@ class Adapter:
 
 
 def make_result(output, raw_response, confidence=None) -> MoveResult:
-    # Only an exact match counts. We never strip, re-case or guess what was meant.
+    # Only an exact match counts, we never fix the output.
     if is_valid_move(output):
         return MoveResult(output, output, raw_response, confidence)
     return MoveResult(output, None, raw_response, confidence, f"invalid move {output!r}")
@@ -118,7 +114,7 @@ def describe_state(state: str, recent_moves: list[str]) -> dict:
 # ---- HTTP, shared by the OpenRouter and Ollama adapters ----
 
 def require_openrouter() -> None:
-    # Safety switch: OpenRouter adapters cannot even be created unless MODE=openrouter and a key is set.
+    # Safety switch: no OpenRouter adapter unless MODE=openrouter and a key is set.
     if config.active_mode() != "openrouter":
         raise RuntimeError("OpenRouter is switched off (needs MODE=openrouter and OPENROUTER_API_KEY in .env).")
 

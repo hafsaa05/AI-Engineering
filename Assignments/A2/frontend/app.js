@@ -4,9 +4,9 @@
 const FACES = ["U", "R", "F", "D", "L", "B"];
 const KIND_STYLES = { "LLM": "llm", "DECISION MODEL": "decision", "MOCK": "mock" };
 const RANK_SUFFIX = { 1: "ST", 2: "ND", 3: "RD" };
-// The GUI offers only these modes; mock (and the warmup, primary and extension sets) stay for the tests.
+// Mock mode and the warmup/primary/extension sets are only used by the tests.
 const GUI_MODES = ["ollama", "openrouter"];
-// Ollama panels are shown in the order the models take their turns (left to right, top to bottom).
+// Ollama panels follow the turn order (left to right, top to bottom).
 const OLLAMA_PANEL_ORDER = ["Gemma3 1B", "Qwen3.5 0.8B", "DeepSeek-R1 1.5B", "Clef Flash"];
 
 let status = null;       // from /api/status
@@ -376,7 +376,7 @@ async function startLiveRace() {
 }
 
 function startDryRun() {
-  // Always the OpenRouter lineup; the panels are drawn from the race_start event the server sends.
+  // Always the OpenRouter lineup; the panels come from the race_start event.
   connect(`/ws/race/${encodeURIComponent(el("puzzle-select").value)}?dry_run=true`, 1);
 }
 

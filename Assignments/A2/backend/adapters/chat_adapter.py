@@ -1,11 +1,4 @@
-"""OpenRouter chat completions adapter, used for Claude Opus 5.5.
-
-It gets the same instructions, cube state and move descriptions as the decision
-models, and must reply with exactly {"move": "..."}. We ask for structured
-output with a JSON schema so the reply format is enforced by the API.
-The message building and reply checking are also used by the Ollama adapter.
-Every OpenRouter request goes through the api_guard (limits, counter, cache).
-"""
+"""OpenRouter chat completions adapter (Claude Opus 5.5). The reply must be exactly {"move": "..."}."""
 
 import json
 import random
@@ -27,7 +20,7 @@ MOVE_SCHEMA = {
     "additionalProperties": False,
 }
 
-# Thinking models (like DeepSeek-R1) write their reasoning inside <think>...</think> before the answer.
+# Thinking models (like DeepSeek-R1) put their reasoning in <think>...</think> first.
 THINK_BLOCK = re.compile(r"^\s*<think>.*?</think>", re.DOTALL)
 
 
@@ -52,11 +45,7 @@ def build_request(model_id: str, state: str, recent_moves: list[str]) -> dict:
 
 
 def parse_reply(content: str):
-    """Read the move from a reply that must be exactly {"move": "..."}.
-
-    A leading thinking block is the model's reasoning, not its answer, so it is
-    skipped. Everything after it is checked strictly and never fixed.
-    """
+    """Read {"move": "..."} from a reply. A leading <think> block is skipped, the rest is checked strictly."""
     answer = THINK_BLOCK.sub("", content, count=1).strip()
     reply = json.loads(answer)
     if not isinstance(reply, dict) or set(reply) != {"move"}:
@@ -65,16 +54,12 @@ def parse_reply(content: str):
 
 
 def parse_response(data: dict):
-    """Pull (move, confidence) out of a chat completion. Update here if the API changes.
-
-    Expected shape: {"choices": [{"message": {"content": "{\\"move\\": \\"R\\"}"}}]}
-    Chat completions give no confidence, so it is always None.
-    """
+    """(move, confidence) from a chat completion. Chat gives no confidence, so it is None."""
     return parse_reply(data["choices"][0]["message"]["content"]), None
 
 
 def result_from_reply(data: dict, parse) -> MoveResult:
-    # Shared by the chat and Ollama adapters: turn a raw response into a checked MoveResult.
+    # Raw response -> checked MoveResult (also used by the Ollama adapter).
     try:
         move, confidence = parse(data)
     except (KeyError, IndexError, TypeError) as e:

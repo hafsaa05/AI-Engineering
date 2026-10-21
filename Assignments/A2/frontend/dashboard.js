@@ -1,4 +1,4 @@
-// Results section (below the race grid): summary table, bar charts, key findings and per puzzle results for one set.
+// Results section under the race grid: summary table, charts, key findings, per puzzle table.
 
 const SET_NAMES = { ollama: "Ollama", openrouter: "OpenRouter" };
 const MODE_NAMES = { mock: "mock models", ollama: "local Ollama models", openrouter: "OpenRouter models" };

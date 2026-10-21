@@ -1,10 +1,4 @@
-"""Local Ollama adapters. Nothing here talks to OpenRouter: every request goes to the local Ollama server.
-
-To keep the comparison fair, the local models get exactly the same requests as the OpenRouter ones:
-- the LLMs get the same messages as Claude on OpenRouter (Ollama's /api/chat)
-- the decision model gets the same choice question as the OpenRouter decision models
-  (Ollama's decision endpoint /v1/systemone, which uses the same request and answer format)
-"""
+"""Local Ollama adapters. Same requests as the OpenRouter models, sent to the local Ollama server."""
 
 from backend import config
 from backend.adapters import decisions_adapter
@@ -28,21 +22,16 @@ def build_chat_request(model_id: str, state: str, recent_moves: list[str], think
 
 
 def parse_chat_response(data: dict):
-    """Pull (move, confidence) out of an Ollama /api/chat reply. Update here if the API changes.
-
-    Expected shape: {"message": {"role": "assistant", "content": "{\\"move\\": \\"R\\"}", "thinking": "..."}}
-    Thinking models put their reasoning in "thinking" (newer Ollama) or in a <think> block at the
-    start of "content" (older Ollama). Only the final answer is read. No confidence is given.
-    """
+    """(move, confidence) from an Ollama /api/chat reply. Only the final answer is read, not the thinking."""
     return parse_reply(data["message"]["content"]), None
 
 
 class OllamaAdapter(Adapter):
-    """What both local adapters share: taking turns, longer time limits, and the readiness check."""
+    """Shared by both local adapters: taking turns, longer timeout, readiness check."""
 
     mode = "ollama"
     runs_alone = True
-    timeout_covers_retries = True  # 120s per move in total, so retries can not stretch one move to 6 minutes
+    timeout_covers_retries = True  # 120s for the whole move, retries included
 
     def __init__(self, name: str, model_id: str, kind: str):
         super().__init__(name, model_id)
@@ -89,7 +78,7 @@ class OllamaChatAdapter(OllamaAdapter):
 
 
 class OllamaDecisionAdapter(OllamaAdapter):
-    """The local decision model (clef-flash). It cannot chat, it only answers choice questions."""
+    """The local decision model (clef-flash). It cannot chat, only answer choice questions."""
 
     async def get_move(self, state: str, recent_moves: list[str]) -> MoveResult:
         request = decisions_adapter.build_request(self.model_id, state, recent_moves)
@@ -97,7 +86,7 @@ class OllamaDecisionAdapter(OllamaAdapter):
         return decisions_adapter.result_from_response(data)
 
     async def warm_question(self, keep_alive) -> None:
-        # A tiny question, only used to load or unload the model (decision models have no /api/generate).
+        # Tiny question just to load or unload the model (no /api/generate for decision models).
         payload = {"model": self.model_id, "keep_alive": keep_alive, "state": "warm up",
                    "questions": {"q": {"type": "choice", "instructions": "Pick one", "criteria": {"a": "A", "b": "B"}}}}
         await self.post(DECISION_PATH, payload, config.OLLAMA_LOAD_TIMEOUT)
