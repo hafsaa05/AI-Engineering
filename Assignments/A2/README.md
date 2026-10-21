@@ -2,7 +2,11 @@
 
 AI Engineering Assignment 02 | Hafsa Rashid | 23K-0064
 
-Demo video: [Watch the screen recording](https://drive.google.com/file/d/1KWW2x6Ek-NvBgvku_ftuBjQFE8_uBk8m/view?usp=sharing)
+## 🎥 Demo Video
+
+**Watch online:** [Google Drive link](https://drive.google.com/file/d/1KWW2x6Ek-NvBgvku_ftuBjQFE8_uBk8m/view?usp=sharing)
+
+**In this repository:** [demo/AIE_A2_Demo_HafsaRashid_23K-0064.mp4](demo/AIE_A2_Demo_HafsaRashid_23K-0064.mp4)
 
 Model IDs verified on the OpenRouter model pages on 21 Oct 2026. Jev, Luna and Clef run on the Decisions API; Opus runs on chat completions.
 
