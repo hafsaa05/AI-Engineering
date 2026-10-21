@@ -1,0 +1,1320 @@
+{
+  "race_id": "20261021-190926_openrouter-1",
+  "model": "Cloudflare Clef",
+  "model_id": "cloudflare/clef",
+  "kind": "DECISION MODEL",
+  "mode": "openrouter",
+  "puzzle_id": "openrouter-1",
+  "puzzle_set": "openrouter",
+  "scramble": [
+    "R",
+    "F",
+    "U"
+  ],
+  "start_state": "LUULUULFFUBBURRFRRURRFFFDDDRRRDDBDDBFFFLLDLLBLLDUBBUBB",
+  "final_state": "LURLUFLFDFUURRBRRBURRFFBDDBRRUDDUDDLFFFLLDLLBFLDUBBUBB",
+  "started_at": "2026-10-21T19:09:28",
+  "moves": [
+    "U'",
+    "U",
+    "R'",
+    "R'",
+    "R'",
+    "R'",
+    "R",
+    "R'",
+    "R'",
+    "R'",
+    null,
+    "R'",
+    "R'",
+    "R",
+    "R'",
+    "R'",
+    "R'",
+    "R'",
+    "R'",
+    "R"
+  ],
+  "move_count": 20,
+  "latencies": [
+    4.663995699999759,
+    4.869930200000454,
+    2.5680210999998963,
+    2.589151799999854,
+    2.08443939999961,
+    1.8444423000000825,
+    1.841656000000512,
+    2.0324837999996817,
+    2.9401011999998445,
+    2.1611108000006425,
+    21.969328199999836,
+    3.8985978000000614,
+    3.813085599999795,
+    3.9099489999998696,
+    0.053472700000384066,
+    0.03484200000002602,
+    0.03109500000027765,
+    0.033960999999180785,
+    0.03513470000052621,
+    0.030477600000267557
+  ],
+  "retries": 0,
+  "invalid_outputs": 0,
+  "failed_calls": 1,
+  "confidences": [
+    0.0345,
+    0.1038,
+    0.0291,
+    0.1422,
+    0.0063,
+    0.0874,
+    0.0903,
+    0.0269,
+    0.0939,
+    0.0944,
+    null,
+    0.0799,
+    0.0588,
+    0.1931,
+    0.0269,
+    0.0939,
+    0.0944,
+    0.0799,
+    0.0588,
+    0.1931
+  ],
+  "api_calls": 14,
+  "cache_hits": 6,
+  "total_cost": 0.000948822,
+  "api_latencies": [
+    4.603144700000485,
+    4.801974699999846,
+    2.525122199999714,
+    2.4572128999998313,
+    2.015590599999996,
+    1.7774191999997129,
+    1.7596160000002783,
+    1.9361597999995865,
+    2.8352060999995956,
+    2.059943700000076,
+    21.91401179999957,
+    3.8307442999994237,
+    3.706762499999968,
+    3.8111136999996233
+  ],
+  "dry_run": false,
+  "total_time": 61.41750199999933,
+  "solved": false,
+  "end_reason": "RAN OUT OF MOVES",
+  "optimal_distance": 3,
+  "optimality_gap": null,
+  "move_log": [
+    {
+      "move": "U'",
+      "valid": true,
+      "latency": 4.663995699999759,
+      "retries": 0,
+      "confidence": 0.0345,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 4.663995699999759,
+          "cache_hit": false,
+          "api_latency": 4.603144700000485,
+          "cache_latency": null,
+          "request_number": 3,
+          "cost": 4.1874e-05,
+          "dry_run": false,
+          "output": "U'",
+          "move": "U'",
+          "confidence": 0.0345,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U'",
+                "probabilities": {
+                  "U": 0.0875,
+                  "U'": 0.0881,
+                  "U2": 0.0848,
+                  "R": 0.0466,
+                  "R'": 0.0858,
+                  "R2": 0.058,
+                  "F": 0.047,
+                  "F'": 0.0504,
+                  "F2": 0.0658,
+                  "D": 0.0504,
+                  "D'": 0.0418,
+                  "D2": 0.0485,
+                  "L": 0.0358,
+                  "L'": 0.0393,
+                  "L2": 0.0431,
+                  "B": 0.0452,
+                  "B'": 0.0425,
+                  "B2": 0.0396
+                },
+                "confidence": 0.0345
+              }
+            },
+            "usage": {
+              "input_tokens": 997,
+              "output_tokens": 0,
+              "cost": 4.1874e-05
+            },
+            "id": "gen-dec-1792591769-x1pEM86K0RTlgmNyB0fl",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 1
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 4.869930200000454,
+      "retries": 0,
+      "confidence": 0.1038,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 4.869930200000454,
+          "cache_hit": false,
+          "api_latency": 4.801974699999846,
+          "cache_latency": null,
+          "request_number": 7,
+          "cost": 4.1916e-05,
+          "dry_run": false,
+          "output": "U",
+          "move": "U",
+          "confidence": 0.1038,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U",
+                "probabilities": {
+                  "U": 0.1536,
+                  "U'": 0.0433,
+                  "U2": 0.0687,
+                  "R": 0.0519,
+                  "R'": 0.0663,
+                  "R2": 0.0368,
+                  "F": 0.0606,
+                  "F'": 0.0552,
+                  "F2": 0.0539,
+                  "D": 0.0543,
+                  "D'": 0.0472,
+                  "D2": 0.0437,
+                  "L": 0.0379,
+                  "L'": 0.0391,
+                  "L2": 0.041,
+                  "B": 0.0531,
+                  "B'": 0.0503,
+                  "B2": 0.043
+                },
+                "confidence": 0.1038
+              }
+            },
+            "usage": {
+              "input_tokens": 998,
+              "output_tokens": 0,
+              "cost": 4.1916e-05
+            },
+            "id": "gen-dec-1792591772-RYDwx8v1XgJfzGJwFxmv",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 2
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 2.5680210999998963,
+      "retries": 0,
+      "confidence": 0.0291,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.5680210999998963,
+          "cache_hit": false,
+          "api_latency": 2.525122199999714,
+          "cache_latency": null,
+          "request_number": 11,
+          "cost": 4.2042e-05,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0291,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0566,
+                  "U'": 0.0712,
+                  "U2": 0.0656,
+                  "R": 0.0609,
+                  "R'": 0.083,
+                  "R2": 0.0455,
+                  "F": 0.054,
+                  "F'": 0.0646,
+                  "F2": 0.0624,
+                  "D": 0.0566,
+                  "D'": 0.0484,
+                  "D2": 0.0437,
+                  "L": 0.0383,
+                  "L'": 0.0458,
+                  "L2": 0.0351,
+                  "B": 0.0612,
+                  "B'": 0.0617,
+                  "B2": 0.0455
+                },
+                "confidence": 0.0291
+              }
+            },
+            "usage": {
+              "input_tokens": 1001,
+              "output_tokens": 0,
+              "cost": 4.2042e-05
+            },
+            "id": "gen-dec-1792591777-1BYHmdZOrBConJFIyJpi",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 3
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 2.589151799999854,
+      "retries": 0,
+      "confidence": 0.1422,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.589151799999854,
+          "cache_hit": false,
+          "api_latency": 2.4572128999998313,
+          "cache_latency": null,
+          "request_number": 12,
+          "cost": 4.2168e-05,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.1422,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0536,
+                  "U'": 0.0659,
+                  "U2": 0.0351,
+                  "R": 0.1556,
+                  "R'": 0.1899,
+                  "R2": 0.071,
+                  "F": 0.0427,
+                  "F'": 0.0529,
+                  "F2": 0.0276,
+                  "D": 0.0383,
+                  "D'": 0.0389,
+                  "D2": 0.0255,
+                  "L": 0.0312,
+                  "L'": 0.0401,
+                  "L2": 0.024,
+                  "B": 0.0386,
+                  "B'": 0.0467,
+                  "B2": 0.0223
+                },
+                "confidence": 0.1422
+              }
+            },
+            "usage": {
+              "input_tokens": 1004,
+              "output_tokens": 0,
+              "cost": 4.2168e-05
+            },
+            "id": "gen-dec-1792591779-zufAPDvnG2eycVPteJye",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 4
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 2.08443939999961,
+      "retries": 0,
+      "confidence": 0.0063,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.08443939999961,
+          "cache_hit": false,
+          "api_latency": 2.015590599999996,
+          "cache_latency": null,
+          "request_number": 13,
+          "cost": 0.0002412,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0063,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0702,
+                  "U'": 0.0751,
+                  "U2": 0.0466,
+                  "R": 0.0886,
+                  "R'": 0.1038,
+                  "R2": 0.0498,
+                  "F": 0.0513,
+                  "F'": 0.0596,
+                  "F2": 0.0468,
+                  "D": 0.0596,
+                  "D'": 0.0509,
+                  "D2": 0.0464,
+                  "L": 0.0364,
+                  "L'": 0.05,
+                  "L2": 0.0331,
+                  "B": 0.0427,
+                  "B'": 0.0557,
+                  "B2": 0.0334
+                },
+                "confidence": 0.0063
+              }
+            },
+            "usage": {
+              "input_tokens": 1005,
+              "output_tokens": 0,
+              "cost": 0.0002412
+            },
+            "id": "gen-dec-1792591782-wVgBEfjC2VG9Am273vBc",
+            "provider": "Cloudflare"
+          }
+        }
+      ],
+      "number": 5
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 1.8444423000000825,
+      "retries": 0,
+      "confidence": 0.0874,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 1.8444423000000825,
+          "cache_hit": false,
+          "api_latency": 1.7774191999997129,
+          "cache_latency": null,
+          "request_number": 14,
+          "cost": 4.2462e-05,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0874,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0508,
+                  "U'": 0.0618,
+                  "U2": 0.0347,
+                  "R": 0.1283,
+                  "R'": 0.1381,
+                  "R2": 0.0778,
+                  "F": 0.039,
+                  "F'": 0.0567,
+                  "F2": 0.0296,
+                  "D": 0.05,
+                  "D'": 0.0485,
+                  "D2": 0.0344,
+                  "L": 0.0425,
+                  "L'": 0.0539,
+                  "L2": 0.0294,
+                  "B": 0.0408,
+                  "B'": 0.0539,
+                  "B2": 0.0299
+                },
+                "confidence": 0.0874
+              }
+            },
+            "usage": {
+              "input_tokens": 1011,
+              "output_tokens": 0,
+              "cost": 4.2462e-05
+            },
+            "id": "gen-dec-1792591784-Jx7aJVyKTZ3X3xKSmuau",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 6
+    },
+    {
+      "move": "R",
+      "valid": true,
+      "latency": 1.841656000000512,
+      "retries": 0,
+      "confidence": 0.0903,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 1.841656000000512,
+          "cache_hit": false,
+          "api_latency": 1.7596160000002783,
+          "cache_latency": null,
+          "request_number": 15,
+          "cost": 4.242e-05,
+          "dry_run": false,
+          "output": "R",
+          "move": "R",
+          "confidence": 0.0903,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "U": 0.0683,
+                  "U'": 0.0818,
+                  "U2": 0.0403,
+                  "R": 0.1408,
+                  "R'": 0.1228,
+                  "R2": 0.0874,
+                  "F": 0.0391,
+                  "F'": 0.056,
+                  "F2": 0.0388,
+                  "D": 0.0445,
+                  "D'": 0.0439,
+                  "D2": 0.0307,
+                  "L": 0.0286,
+                  "L'": 0.0394,
+                  "L2": 0.0221,
+                  "B": 0.0423,
+                  "B'": 0.0475,
+                  "B2": 0.0258
+                },
+                "confidence": 0.0903
+              }
+            },
+            "usage": {
+              "input_tokens": 1010,
+              "output_tokens": 0,
+              "cost": 4.242e-05
+            },
+            "id": "gen-dec-1792591786-xr3LCxdx4UrugBxPOMgH",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 7
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 2.0324837999996817,
+      "retries": 0,
+      "confidence": 0.0269,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.0324837999996817,
+          "cache_hit": false,
+          "api_latency": 1.9361597999995865,
+          "cache_latency": null,
+          "request_number": 16,
+          "cost": 0.00024264,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0269,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.05,
+                  "U'": 0.0684,
+                  "U2": 0.0353,
+                  "R": 0.1148,
+                  "R'": 0.1845,
+                  "R2": 0.0672,
+                  "F": 0.036,
+                  "F'": 0.0538,
+                  "F2": 0.0286,
+                  "D": 0.0461,
+                  "D'": 0.0475,
+                  "D2": 0.0323,
+                  "L": 0.0285,
+                  "L'": 0.0506,
+                  "L2": 0.0238,
+                  "B": 0.0461,
+                  "B'": 0.0597,
+                  "B2": 0.0268
+                },
+                "confidence": 0.0269
+              }
+            },
+            "usage": {
+              "input_tokens": 1011,
+              "output_tokens": 0,
+              "cost": 0.00024264
+            },
+            "id": "gen-dec-1792591788-X3z8lYbP1Ei01KO93I6T",
+            "provider": "Cloudflare"
+          }
+        }
+      ],
+      "number": 8
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 2.9401011999998445,
+      "retries": 0,
+      "confidence": 0.0939,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.9401011999998445,
+          "cache_hit": false,
+          "api_latency": 2.8352060999995956,
+          "cache_latency": null,
+          "request_number": 17,
+          "cost": 4.242e-05,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0939,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0587,
+                  "U'": 0.0835,
+                  "U2": 0.0454,
+                  "R": 0.1318,
+                  "R'": 0.1442,
+                  "R2": 0.0502,
+                  "F": 0.0401,
+                  "F'": 0.0648,
+                  "F2": 0.0426,
+                  "D": 0.045,
+                  "D'": 0.045,
+                  "D2": 0.031,
+                  "L": 0.03,
+                  "L'": 0.0443,
+                  "L2": 0.0245,
+                  "B": 0.0416,
+                  "B'": 0.0526,
+                  "B2": 0.0245
+                },
+                "confidence": 0.0939
+              }
+            },
+            "usage": {
+              "input_tokens": 1010,
+              "output_tokens": 0,
+              "cost": 4.242e-05
+            },
+            "id": "gen-dec-1792591791-iL2WW7VcWcM1RY5eKYtF",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 9
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 2.1611108000006425,
+      "retries": 0,
+      "confidence": 0.0944,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.1611108000006425,
+          "cache_hit": false,
+          "api_latency": 2.059943700000076,
+          "cache_latency": null,
+          "request_number": 19,
+          "cost": 4.242e-05,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0944,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0566,
+                  "U'": 0.0824,
+                  "U2": 0.0485,
+                  "R": 0.1343,
+                  "R'": 0.1447,
+                  "R2": 0.0713,
+                  "F": 0.0318,
+                  "F'": 0.0549,
+                  "F2": 0.0299,
+                  "D": 0.0428,
+                  "D'": 0.0462,
+                  "D2": 0.033,
+                  "L": 0.0276,
+                  "L'": 0.0395,
+                  "L2": 0.024,
+                  "B": 0.0408,
+                  "B'": 0.0573,
+                  "B2": 0.0344
+                },
+                "confidence": 0.0944
+              }
+            },
+            "usage": {
+              "input_tokens": 1010,
+              "output_tokens": 0,
+              "cost": 4.242e-05
+            },
+            "id": "gen-dec-1792591793-OzXSyNOiUTreuftLGqkY",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 10
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 21.969328199999836,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 21.969328199999836,
+          "cache_hit": false,
+          "api_latency": 21.91401179999957,
+          "cache_latency": null,
+          "request_number": 21,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "could not connect to https://openrouter.ai/api/alpha/decisions",
+          "raw_response": null
+        }
+      ],
+      "number": 11
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 3.8985978000000614,
+      "retries": 0,
+      "confidence": 0.0799,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 3.8985978000000614,
+          "cache_hit": false,
+          "api_latency": 3.8307442999994237,
+          "cache_latency": null,
+          "request_number": 26,
+          "cost": 4.2336e-05,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0799,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0628,
+                  "U'": 0.0746,
+                  "U2": 0.0456,
+                  "R": 0.1129,
+                  "R'": 0.131,
+                  "R2": 0.0674,
+                  "F": 0.039,
+                  "F'": 0.0555,
+                  "F2": 0.0318,
+                  "D": 0.0521,
+                  "D'": 0.0493,
+                  "D2": 0.0358,
+                  "L": 0.0409,
+                  "L'": 0.0519,
+                  "L2": 0.0281,
+                  "B": 0.039,
+                  "B'": 0.0542,
+                  "B2": 0.0279
+                },
+                "confidence": 0.0799
+              }
+            },
+            "usage": {
+              "input_tokens": 1008,
+              "output_tokens": 0,
+              "cost": 4.2336e-05
+            },
+            "id": "gen-dec-1792591818-tXA7yNRO2xvciqnpu5NX",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 12
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 3.813085599999795,
+      "retries": 0,
+      "confidence": 0.0588,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 3.813085599999795,
+          "cache_hit": false,
+          "api_latency": 3.706762499999968,
+          "cache_latency": null,
+          "request_number": 29,
+          "cost": 4.2462e-05,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0588,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0636,
+                  "U'": 0.0734,
+                  "U2": 0.0454,
+                  "R": 0.104,
+                  "R'": 0.1111,
+                  "R2": 0.0717,
+                  "F": 0.0385,
+                  "F'": 0.0595,
+                  "F2": 0.0293,
+                  "D": 0.0585,
+                  "D'": 0.0519,
+                  "D2": 0.0374,
+                  "L": 0.0407,
+                  "L'": 0.0541,
+                  "L2": 0.0284,
+                  "B": 0.0472,
+                  "B'": 0.0541,
+                  "B2": 0.031
+                },
+                "confidence": 0.0588
+              }
+            },
+            "usage": {
+              "input_tokens": 1011,
+              "output_tokens": 0,
+              "cost": 4.2462e-05
+            },
+            "id": "gen-dec-1792591822-Gs4LEdpyvV02ufvqB46v",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 13
+    },
+    {
+      "move": "R",
+      "valid": true,
+      "latency": 3.9099489999998696,
+      "retries": 0,
+      "confidence": 0.1931,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 3.9099489999998696,
+          "cache_hit": false,
+          "api_latency": 3.8111136999996233,
+          "cache_latency": null,
+          "request_number": 32,
+          "cost": 4.2462e-05,
+          "dry_run": false,
+          "output": "R",
+          "move": "R",
+          "confidence": 0.1931,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "U": 0.0609,
+                  "U'": 0.0661,
+                  "U2": 0.0425,
+                  "R": 0.2379,
+                  "R'": 0.0653,
+                  "R2": 0.0921,
+                  "F": 0.0363,
+                  "F'": 0.0533,
+                  "F2": 0.0361,
+                  "D": 0.0445,
+                  "D'": 0.0432,
+                  "D2": 0.0294,
+                  "L": 0.0279,
+                  "L'": 0.0355,
+                  "L2": 0.0209,
+                  "B": 0.0384,
+                  "B'": 0.0445,
+                  "B2": 0.0252
+                },
+                "confidence": 0.1931
+              }
+            },
+            "usage": {
+              "input_tokens": 1011,
+              "output_tokens": 0,
+              "cost": 4.2462e-05
+            },
+            "id": "gen-dec-1792591826-ZIwFAqKJsdc3JHUzhdpy",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 14
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 0.053472700000384066,
+      "retries": 0,
+      "confidence": 0.0269,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.053472700000384066,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.05333020000034594,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0269,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.05,
+                  "U'": 0.0684,
+                  "U2": 0.0353,
+                  "R": 0.1148,
+                  "R'": 0.1845,
+                  "R2": 0.0672,
+                  "F": 0.036,
+                  "F'": 0.0538,
+                  "F2": 0.0286,
+                  "D": 0.0461,
+                  "D'": 0.0475,
+                  "D2": 0.0323,
+                  "L": 0.0285,
+                  "L'": 0.0506,
+                  "L2": 0.0238,
+                  "B": 0.0461,
+                  "B'": 0.0597,
+                  "B2": 0.0268
+                },
+                "confidence": 0.0269
+              }
+            },
+            "usage": {
+              "input_tokens": 1011,
+              "output_tokens": 0,
+              "cost": 0.00024264
+            },
+            "id": "gen-dec-1792591788-X3z8lYbP1Ei01KO93I6T",
+            "provider": "Cloudflare"
+          }
+        }
+      ],
+      "number": 15
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 0.03484200000002602,
+      "retries": 0,
+      "confidence": 0.0939,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.03484200000002602,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.03473379999923054,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0939,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0587,
+                  "U'": 0.0835,
+                  "U2": 0.0454,
+                  "R": 0.1318,
+                  "R'": 0.1442,
+                  "R2": 0.0502,
+                  "F": 0.0401,
+                  "F'": 0.0648,
+                  "F2": 0.0426,
+                  "D": 0.045,
+                  "D'": 0.045,
+                  "D2": 0.031,
+                  "L": 0.03,
+                  "L'": 0.0443,
+                  "L2": 0.0245,
+                  "B": 0.0416,
+                  "B'": 0.0526,
+                  "B2": 0.0245
+                },
+                "confidence": 0.0939
+              }
+            },
+            "usage": {
+              "input_tokens": 1010,
+              "output_tokens": 0,
+              "cost": 4.242e-05
+            },
+            "id": "gen-dec-1792591791-iL2WW7VcWcM1RY5eKYtF",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 16
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 0.03109500000027765,
+      "retries": 0,
+      "confidence": 0.0944,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.03109500000027765,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.03099370000018098,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0944,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0566,
+                  "U'": 0.0824,
+                  "U2": 0.0485,
+                  "R": 0.1343,
+                  "R'": 0.1447,
+                  "R2": 0.0713,
+                  "F": 0.0318,
+                  "F'": 0.0549,
+                  "F2": 0.0299,
+                  "D": 0.0428,
+                  "D'": 0.0462,
+                  "D2": 0.033,
+                  "L": 0.0276,
+                  "L'": 0.0395,
+                  "L2": 0.024,
+                  "B": 0.0408,
+                  "B'": 0.0573,
+                  "B2": 0.0344
+                },
+                "confidence": 0.0944
+              }
+            },
+            "usage": {
+              "input_tokens": 1010,
+              "output_tokens": 0,
+              "cost": 4.242e-05
+            },
+            "id": "gen-dec-1792591793-OzXSyNOiUTreuftLGqkY",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 17
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 0.033960999999180785,
+      "retries": 0,
+      "confidence": 0.0799,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.033960999999180785,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.03388539999923523,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0799,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0628,
+                  "U'": 0.0746,
+                  "U2": 0.0456,
+                  "R": 0.1129,
+                  "R'": 0.131,
+                  "R2": 0.0674,
+                  "F": 0.039,
+                  "F'": 0.0555,
+                  "F2": 0.0318,
+                  "D": 0.0521,
+                  "D'": 0.0493,
+                  "D2": 0.0358,
+                  "L": 0.0409,
+                  "L'": 0.0519,
+                  "L2": 0.0281,
+                  "B": 0.039,
+                  "B'": 0.0542,
+                  "B2": 0.0279
+                },
+                "confidence": 0.0799
+              }
+            },
+            "usage": {
+              "input_tokens": 1008,
+              "output_tokens": 0,
+              "cost": 4.2336e-05
+            },
+            "id": "gen-dec-1792591818-tXA7yNRO2xvciqnpu5NX",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 18
+    },
+    {
+      "move": "R'",
+      "valid": true,
+      "latency": 0.03513470000052621,
+      "retries": 0,
+      "confidence": 0.0588,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.03513470000052621,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.035042800000155694,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "R'",
+          "move": "R'",
+          "confidence": 0.0588,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R'",
+                "probabilities": {
+                  "U": 0.0636,
+                  "U'": 0.0734,
+                  "U2": 0.0454,
+                  "R": 0.104,
+                  "R'": 0.1111,
+                  "R2": 0.0717,
+                  "F": 0.0385,
+                  "F'": 0.0595,
+                  "F2": 0.0293,
+                  "D": 0.0585,
+                  "D'": 0.0519,
+                  "D2": 0.0374,
+                  "L": 0.0407,
+                  "L'": 0.0541,
+                  "L2": 0.0284,
+                  "B": 0.0472,
+                  "B'": 0.0541,
+                  "B2": 0.031
+                },
+                "confidence": 0.0588
+              }
+            },
+            "usage": {
+              "input_tokens": 1011,
+              "output_tokens": 0,
+              "cost": 4.2462e-05
+            },
+            "id": "gen-dec-1792591822-Gs4LEdpyvV02ufvqB46v",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 19
+    },
+    {
+      "move": "R",
+      "valid": true,
+      "latency": 0.030477600000267557,
+      "retries": 0,
+      "confidence": 0.1931,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.030477600000267557,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.03037140000014915,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "R",
+          "move": "R",
+          "confidence": 0.1931,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "cloudflare/clef",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "R",
+                "probabilities": {
+                  "U": 0.0609,
+                  "U'": 0.0661,
+                  "U2": 0.0425,
+                  "R": 0.2379,
+                  "R'": 0.0653,
+                  "R2": 0.0921,
+                  "F": 0.0363,
+                  "F'": 0.0533,
+                  "F2": 0.0361,
+                  "D": 0.0445,
+                  "D'": 0.0432,
+                  "D2": 0.0294,
+                  "L": 0.0279,
+                  "L'": 0.0355,
+                  "L2": 0.0209,
+                  "B": 0.0384,
+                  "B'": 0.0445,
+                  "B2": 0.0252
+                },
+                "confidence": 0.1931
+              }
+            },
+            "usage": {
+              "input_tokens": 1011,
+              "output_tokens": 0,
+              "cost": 4.2462e-05
+            },
+            "id": "gen-dec-1792591826-ZIwFAqKJsdc3JHUzhdpy",
+            "provider": "PrimeIntellect"
+          }
+        }
+      ],
+      "number": 20
+    }
+  ],
+  "limit_message": null,
+  "lane": 2
+}

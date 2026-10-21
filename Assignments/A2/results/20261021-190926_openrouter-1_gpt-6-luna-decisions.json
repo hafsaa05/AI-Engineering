@@ -1,0 +1,642 @@
+{
+  "race_id": "20261021-190926_openrouter-1",
+  "model": "GPT-6 Luna Decisions",
+  "model_id": "openai/gpt-6-luna-decisions",
+  "kind": "DECISION MODEL",
+  "mode": "openrouter",
+  "puzzle_id": "openrouter-1",
+  "puzzle_set": "openrouter",
+  "scramble": [
+    "R",
+    "F",
+    "U"
+  ],
+  "start_state": "LUULUULFFUBBURRFRRURRFFFDDDRRRDDBDDBFFFLLDLLBLLDUBBUBB",
+  "final_state": "LUULUULFFUBBURRFRRURRFFFDDDRRRDDBDDBFFFLLDLLBLLDUBBUBB",
+  "started_at": "2026-10-21T19:09:27",
+  "moves": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "move_count": 20,
+  "latencies": [
+    24.1600770999994,
+    21.93321830000059,
+    2.1345601000002716,
+    2.926336600000468,
+    2.075883900000008,
+    5.69359970000005,
+    3.246038799999951,
+    2.9000369000004866,
+    2.5480132000002413,
+    2.145458000000872,
+    21.977464200000213,
+    21.977950200000123,
+    2.5571616000006543,
+    2.7849370000003546,
+    1.9984600999996474,
+    2.3353074000006018,
+    3.195117599999321,
+    2.2160351000002265,
+    2.1737935999999536,
+    1.974469699999645
+  ],
+  "retries": 0,
+  "invalid_outputs": 0,
+  "failed_calls": 20,
+  "confidences": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "api_calls": 20,
+  "cache_hits": 0,
+  "total_cost": 0.0,
+  "api_latencies": [
+    24.15198490000057,
+    21.901561000000584,
+    2.1073651000006066,
+    2.9005033000003095,
+    2.037353799999437,
+    5.661378699999659,
+    3.214352100000724,
+    2.8602982000002157,
+    2.5247062000007645,
+    2.1175968999996257,
+    21.94390410000051,
+    21.944294799999625,
+    2.5206173000005947,
+    2.753618699999606,
+    1.9572821000001568,
+    2.29823960000067,
+    3.1583190999999715,
+    2.171434599999884,
+    2.136376599999494,
+    1.9291158999994877
+  ],
+  "dry_run": false,
+  "total_time": 132.9656128000006,
+  "solved": false,
+  "end_reason": "RAN OUT OF MOVES",
+  "optimal_distance": 3,
+  "optimality_gap": null,
+  "move_log": [
+    {
+      "move": null,
+      "valid": false,
+      "latency": 24.1600770999994,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 24.1600770999994,
+          "cache_hit": false,
+          "api_latency": 24.15198490000057,
+          "cache_latency": null,
+          "request_number": 2,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "could not connect to https://openrouter.ai/api/alpha/decisions",
+          "raw_response": null
+        }
+      ],
+      "number": 1
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 21.93321830000059,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 21.93321830000059,
+          "cache_hit": false,
+          "api_latency": 21.901561000000584,
+          "cache_latency": null,
+          "request_number": 18,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "could not connect to https://openrouter.ai/api/alpha/decisions",
+          "raw_response": null
+        }
+      ],
+      "number": 2
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.1345601000002716,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.1345601000002716,
+          "cache_hit": false,
+          "api_latency": 2.1073651000006066,
+          "cache_latency": null,
+          "request_number": 24,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 3
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.926336600000468,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.926336600000468,
+          "cache_hit": false,
+          "api_latency": 2.9005033000003095,
+          "cache_latency": null,
+          "request_number": 25,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 4
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.075883900000008,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.075883900000008,
+          "cache_hit": false,
+          "api_latency": 2.037353799999437,
+          "cache_latency": null,
+          "request_number": 27,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 5
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 5.69359970000005,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 5.69359970000005,
+          "cache_hit": false,
+          "api_latency": 5.661378699999659,
+          "cache_latency": null,
+          "request_number": 28,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 6
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 3.246038799999951,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 3.246038799999951,
+          "cache_hit": false,
+          "api_latency": 3.214352100000724,
+          "cache_latency": null,
+          "request_number": 33,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 7
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.9000369000004866,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.9000369000004866,
+          "cache_hit": false,
+          "api_latency": 2.8602982000002157,
+          "cache_latency": null,
+          "request_number": 35,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 8
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.5480132000002413,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.5480132000002413,
+          "cache_hit": false,
+          "api_latency": 2.5247062000007645,
+          "cache_latency": null,
+          "request_number": 37,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 9
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.145458000000872,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.145458000000872,
+          "cache_hit": false,
+          "api_latency": 2.1175968999996257,
+          "cache_latency": null,
+          "request_number": 38,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 10
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 21.977464200000213,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 21.977464200000213,
+          "cache_hit": false,
+          "api_latency": 21.94390410000051,
+          "cache_latency": null,
+          "request_number": 39,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "could not connect to https://openrouter.ai/api/alpha/decisions",
+          "raw_response": null
+        }
+      ],
+      "number": 11
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 21.977950200000123,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 21.977950200000123,
+          "cache_hit": false,
+          "api_latency": 21.944294799999625,
+          "cache_latency": null,
+          "request_number": 40,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "could not connect to https://openrouter.ai/api/alpha/decisions",
+          "raw_response": null
+        }
+      ],
+      "number": 12
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.5571616000006543,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.5571616000006543,
+          "cache_hit": false,
+          "api_latency": 2.5206173000005947,
+          "cache_latency": null,
+          "request_number": 41,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 13
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.7849370000003546,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.7849370000003546,
+          "cache_hit": false,
+          "api_latency": 2.753618699999606,
+          "cache_latency": null,
+          "request_number": 42,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 14
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 1.9984600999996474,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 1.9984600999996474,
+          "cache_hit": false,
+          "api_latency": 1.9572821000001568,
+          "cache_latency": null,
+          "request_number": 43,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 15
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.3353074000006018,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.3353074000006018,
+          "cache_hit": false,
+          "api_latency": 2.29823960000067,
+          "cache_latency": null,
+          "request_number": 44,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 16
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 3.195117599999321,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 3.195117599999321,
+          "cache_hit": false,
+          "api_latency": 3.1583190999999715,
+          "cache_latency": null,
+          "request_number": 45,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 17
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.2160351000002265,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.2160351000002265,
+          "cache_hit": false,
+          "api_latency": 2.171434599999884,
+          "cache_latency": null,
+          "request_number": 46,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 18
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.1737935999999536,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.1737935999999536,
+          "cache_hit": false,
+          "api_latency": 2.136376599999494,
+          "cache_latency": null,
+          "request_number": 47,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 19
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 1.974469699999645,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 1.974469699999645,
+          "cache_hit": false,
+          "api_latency": 1.9291158999994877,
+          "cache_latency": null,
+          "request_number": 48,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 502: {\"error\":{\"message\":\"OpenAI refused to answer question \\\"next_move\\\"\",\"code\":502}}",
+          "raw_response": null
+        }
+      ],
+      "number": 20
+    }
+  ],
+  "limit_message": null,
+  "lane": 1
+}

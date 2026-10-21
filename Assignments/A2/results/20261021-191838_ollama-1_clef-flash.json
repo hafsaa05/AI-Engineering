@@ -1,0 +1,159 @@
+{
+  "race_id": "20261021-191838_ollama-1",
+  "model": "Clef Flash",
+  "model_id": "clef-flash:latest",
+  "kind": "DECISION MODEL",
+  "mode": "ollama",
+  "puzzle_id": "ollama-1",
+  "puzzle_set": "ollama",
+  "scramble": [
+    "F'",
+    "R'",
+    "L"
+  ],
+  "start_state": "BUBBUBBRBRRRRRRDDDUFUUFURFRFLFFDFFDFLLLLLLUUUDBDDBDLBL",
+  "final_state": "BUBBUBBRBRRRRRRDDDUFUUFURFRFLFFDFFDFLLLLLLUUUDBDDBDLBL",
+  "started_at": "2026-10-21T19:29:41",
+  "moves": [
+    null,
+    null
+  ],
+  "move_count": 2,
+  "latencies": [
+    120.00546699999995,
+    120.01118560000032
+  ],
+  "retries": 4,
+  "invalid_outputs": 0,
+  "failed_calls": 6,
+  "confidences": [
+    null,
+    null
+  ],
+  "api_calls": 0,
+  "cache_hits": 0,
+  "total_cost": 0.0,
+  "api_latencies": [],
+  "dry_run": false,
+  "total_time": 300,
+  "solved": false,
+  "end_reason": "OUT OF TIME",
+  "optimal_distance": 3,
+  "optimality_gap": null,
+  "move_log": [
+    {
+      "move": null,
+      "valid": false,
+      "latency": 120.00546699999995,
+      "retries": 2,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 51.454108500000075,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server startup failed after projector CPU offload retry: llama-server reported out-of-memory during startup: llama_init_from_model: model default pooling_type is [-1], but [0] was specified\\nggml_backend_cpu_buffer_type_alloc_buffer: failed to allocate buffer of size 4348379264\\nggml",
+          "raw_response": null
+        },
+        {
+          "latency": 54.1809045,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server startup failed after projector CPU offload retry: llama-server reported out-of-memory during startup: llama_init_from_model: model default pooling_type is [-1], but [0] was specified\\nggml_backend_cpu_buffer_type_alloc_buffer: failed to allocate buffer of size 4348379264\\nggml",
+          "raw_response": null
+        },
+        {
+          "latency": 14.370453999999881,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "timed out after 14.4s",
+          "raw_response": null
+        }
+      ],
+      "number": 1
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 120.01118560000032,
+      "retries": 2,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 57.09444390000044,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server startup failed after projector CPU offload retry: llama-server reported out-of-memory during startup: llama_init_from_model: model default pooling_type is [-1], but [0] was specified\\nggml_backend_cpu_buffer_type_alloc_buffer: failed to allocate buffer of size 4348379264\\nggml",
+          "raw_response": null
+        },
+        {
+          "latency": 60.09871469999962,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server startup failed after projector CPU offload retry: llama-server reported out-of-memory during startup: llama_init_from_model: model default pooling_type is [-1], but [0] was specified\\nggml_backend_cpu_buffer_type_alloc_buffer: failed to allocate buffer of size 4348379264\\nggml",
+          "raw_response": null
+        },
+        {
+          "latency": 2.8180270000002565,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "timed out after 2.8s",
+          "raw_response": null
+        }
+      ],
+      "number": 2
+    }
+  ],
+  "limit_message": null,
+  "lane": 0
+}

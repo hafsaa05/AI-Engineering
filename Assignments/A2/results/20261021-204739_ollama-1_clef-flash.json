@@ -1,0 +1,218 @@
+{
+  "race_id": "20261021-204739_ollama-1",
+  "model": "Clef Flash",
+  "model_id": "clef-flash:latest",
+  "kind": "DECISION MODEL",
+  "mode": "ollama",
+  "puzzle_id": "ollama-1",
+  "puzzle_set": "ollama",
+  "scramble": [
+    "F'",
+    "R'",
+    "L"
+  ],
+  "start_state": "BUBBUBBRBRRRRRRDDDUFUUFURFRFLFFDFFDFLLLLLLUUUDBDDBDLBL",
+  "final_state": "BUBBUBBRBRRRRRRDDDUFUUFURFRFLFFDFFDFLLLLLLUUUDBDDBDLBL",
+  "started_at": "2026-10-21T20:57:06",
+  "moves": [
+    null,
+    null,
+    null
+  ],
+  "move_count": 3,
+  "latencies": [
+    87.62768099999812,
+    69.08182239999951,
+    120.03164160000051
+  ],
+  "retries": 6,
+  "invalid_outputs": 0,
+  "failed_calls": 9,
+  "confidences": [
+    null,
+    null,
+    null
+  ],
+  "api_calls": 0,
+  "cache_hits": 0,
+  "total_cost": 0.0,
+  "api_latencies": [],
+  "dry_run": false,
+  "total_time": 300,
+  "solved": false,
+  "end_reason": "OUT OF TIME",
+  "optimal_distance": 3,
+  "optimality_gap": null,
+  "move_log": [
+    {
+      "move": null,
+      "valid": false,
+      "latency": 87.62768099999812,
+      "retries": 2,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 24.478778599999714,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: llama_init_from_model: model default pooling_type is [-1], bu",
+          "raw_response": null
+        },
+        {
+          "latency": 41.688193499998306,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: llama_init_from_model: model default pooling_type is [-1], bu",
+          "raw_response": null
+        },
+        {
+          "latency": 21.4607089000001,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: llama_init_from_model: model default pooling_type is [-1], bu",
+          "raw_response": null
+        }
+      ],
+      "number": 1
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 69.08182239999951,
+      "retries": 2,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 23.435461200000645,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: llama_init_from_model: model default pooling_type is [-1], bu",
+          "raw_response": null
+        },
+        {
+          "latency": 22.704331699998875,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: llama_init_from_model: model default pooling_type is [-1], bu",
+          "raw_response": null
+        },
+        {
+          "latency": 22.94202949999999,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: llama_init_from_model: model default pooling_type is [-1], bu",
+          "raw_response": null
+        }
+      ],
+      "number": 2
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 120.03164160000051,
+      "retries": 2,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 62.95769190000101,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: llama_init_from_model: model default pooling_type is [-1], bu",
+          "raw_response": null
+        },
+        {
+          "latency": 33.26941199999965,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 500: {\"error\":\"llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: llama_init_from_model: model default pooling_type is [-1], bu",
+          "raw_response": null
+        },
+        {
+          "latency": 23.804537699999855,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "timed out after 23.8s",
+          "raw_response": null
+        }
+      ],
+      "number": 3
+    }
+  ],
+  "limit_message": null,
+  "lane": 0
+}

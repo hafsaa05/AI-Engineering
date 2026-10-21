@@ -1,0 +1,1279 @@
+{
+  "race_id": "20261021-190926_openrouter-1",
+  "model": "Jev 1.13",
+  "model_id": "typesafe/jev-1.13",
+  "kind": "DECISION MODEL",
+  "mode": "openrouter",
+  "puzzle_id": "openrouter-1",
+  "puzzle_set": "openrouter",
+  "scramble": [
+    "R",
+    "F",
+    "U"
+  ],
+  "start_state": "LUULUULFFUBBURRFRRURRFFFDDDRRRDDBDDBFFFLLDLLBLLDUBBUBB",
+  "final_state": "LUULUULFFUBBURRFRRURRFFFDDDRRRDDBDDBFFFLLDLLBLLDUBBUBB",
+  "started_at": "2026-10-21T19:09:26",
+  "moves": [
+    "U",
+    null,
+    "U'",
+    "U",
+    null,
+    "U'",
+    "U",
+    "U'",
+    "U",
+    "U'",
+    "U",
+    "U'",
+    "U",
+    "U'",
+    "U",
+    "U'",
+    "U",
+    "U'",
+    "U",
+    "U'"
+  ],
+  "move_count": 20,
+  "latencies": [
+    5.492749800000638,
+    22.816928299999745,
+    2.895464600000196,
+    1.950522799999817,
+    22.914591400000063,
+    1.916289699999652,
+    3.874291699999958,
+    3.193592399999943,
+    3.082911299999978,
+    0.06165640000017447,
+    0.029945999999654305,
+    0.032555499999944004,
+    0.02703159999964555,
+    0.03118019999965327,
+    0.02842320000036125,
+    0.03755280000041239,
+    0.027571999999963737,
+    0.03228240000044025,
+    0.029658800000106567,
+    0.03066729999954987
+  ],
+  "retries": 0,
+  "invalid_outputs": 0,
+  "failed_calls": 2,
+  "confidences": [
+    0.15,
+    null,
+    0.59,
+    0.21,
+    null,
+    0.41,
+    0.23,
+    0.44,
+    0.26,
+    0.44,
+    0.26,
+    0.44,
+    0.26,
+    0.44,
+    0.26,
+    0.44,
+    0.26,
+    0.44,
+    0.26,
+    0.44
+  ],
+  "api_calls": 9,
+  "cache_hits": 11,
+  "total_cost": 0.000340662,
+  "api_latencies": [
+    5.458042299999761,
+    22.79459080000015,
+    2.8237637000001996,
+    1.8510474000004251,
+    22.865126199999395,
+    1.848266899999544,
+    3.7821390999997675,
+    3.082731999999851,
+    2.977229399999487
+  ],
+  "dry_run": false,
+  "total_time": 68.51979870000014,
+  "solved": false,
+  "end_reason": "RAN OUT OF MOVES",
+  "optimal_distance": 3,
+  "optimality_gap": null,
+  "move_log": [
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 5.492749800000638,
+      "retries": 0,
+      "confidence": 0.15,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 5.492749800000638,
+          "cache_hit": false,
+          "api_latency": 5.458042299999761,
+          "cache_latency": null,
+          "request_number": 1,
+          "cost": 4.8132e-05,
+          "dry_run": false,
+          "output": "U",
+          "move": "U",
+          "confidence": 0.15,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U",
+                "probabilities": {
+                  "U": 0.2,
+                  "U'": 0.07,
+                  "U2": 0.12,
+                  "R": 0.07,
+                  "R'": 0.04,
+                  "R2": 0.09,
+                  "F": 0.04,
+                  "F'": 0.02,
+                  "F2": 0.07,
+                  "D": 0.03,
+                  "D'": 0.01,
+                  "D2": 0.04,
+                  "L": 0.05,
+                  "L'": 0.03,
+                  "L2": 0.06,
+                  "B": 0.02,
+                  "B'": 0.01,
+                  "B2": 0.03
+                },
+                "confidence": 0.15
+              }
+            },
+            "usage": {
+              "input_tokens": 1146,
+              "output_tokens": 156,
+              "cost": 4.8132e-05
+            },
+            "id": "gen-dec-1792591769-4CRnQQkfTaRVURWr4JGj",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 1
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 22.816928299999745,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 22.816928299999745,
+          "cache_hit": false,
+          "api_latency": 22.79459080000015,
+          "cache_latency": null,
+          "request_number": 6,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "could not connect to https://openrouter.ai/api/alpha/decisions",
+          "raw_response": null
+        }
+      ],
+      "number": 2
+    },
+    {
+      "move": "U'",
+      "valid": true,
+      "latency": 2.895464600000196,
+      "retries": 0,
+      "confidence": 0.59,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.895464600000196,
+          "cache_hit": false,
+          "api_latency": 2.8237637000001996,
+          "cache_latency": null,
+          "request_number": 20,
+          "cost": 4.8342e-05,
+          "dry_run": false,
+          "output": "U'",
+          "move": "U'",
+          "confidence": 0.59,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U'",
+                "probabilities": {
+                  "U": 0.15,
+                  "U'": 0.61,
+                  "U2": 0.06,
+                  "R": 0.03,
+                  "R'": 0.02,
+                  "R2": 0.01,
+                  "F": 0.01,
+                  "F'": 0.01,
+                  "F2": 0.01,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.01,
+                  "L": 0.02,
+                  "L'": 0.01,
+                  "L2": 0.01,
+                  "B": 0,
+                  "B'": 0,
+                  "B2": 0.01
+                },
+                "confidence": 0.59
+              }
+            },
+            "usage": {
+              "input_tokens": 1151,
+              "output_tokens": 157,
+              "cost": 4.8342e-05
+            },
+            "id": "gen-dec-1792591795-U7d0S0Ox1jgz0jsPYVyN",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 3
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 1.950522799999817,
+      "retries": 0,
+      "confidence": 0.21,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 1.950522799999817,
+          "cache_hit": false,
+          "api_latency": 1.8510474000004251,
+          "cache_latency": null,
+          "request_number": 22,
+          "cost": 4.8468e-05,
+          "dry_run": false,
+          "output": "U",
+          "move": "U",
+          "confidence": 0.21,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U",
+                "probabilities": {
+                  "U": 0.25,
+                  "U'": 0.07,
+                  "U2": 0.12,
+                  "R": 0.1,
+                  "R'": 0.05,
+                  "R2": 0.06,
+                  "F": 0.04,
+                  "F'": 0.02,
+                  "F2": 0.04,
+                  "D": 0.03,
+                  "D'": 0.02,
+                  "D2": 0.03,
+                  "L": 0.05,
+                  "L'": 0.03,
+                  "L2": 0.04,
+                  "B": 0.02,
+                  "B'": 0.01,
+                  "B2": 0.02
+                },
+                "confidence": 0.21
+              }
+            },
+            "usage": {
+              "input_tokens": 1154,
+              "output_tokens": 156,
+              "cost": 4.8468e-05
+            },
+            "id": "gen-dec-1792591797-TIyhkJwThMwSk4Hkmgkf",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 4
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 22.914591400000063,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 22.914591400000063,
+          "cache_hit": false,
+          "api_latency": 22.865126199999395,
+          "cache_latency": null,
+          "request_number": 23,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "could not connect to https://openrouter.ai/api/alpha/decisions",
+          "raw_response": null
+        }
+      ],
+      "number": 5
+    },
+    {
+      "move": "U'",
+      "valid": true,
+      "latency": 1.916289699999652,
+      "retries": 0,
+      "confidence": 0.41,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 1.916289699999652,
+          "cache_hit": false,
+          "api_latency": 1.848266899999544,
+          "cache_latency": null,
+          "request_number": 30,
+          "cost": 4.872e-05,
+          "dry_run": false,
+          "output": "U'",
+          "move": "U'",
+          "confidence": 0.41,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U'",
+                "probabilities": {
+                  "U": 0.2,
+                  "U'": 0.44,
+                  "U2": 0.09,
+                  "R": 0.05,
+                  "R'": 0.02,
+                  "R2": 0.02,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.02,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.01,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.02,
+                  "B": 0.01,
+                  "B'": 0,
+                  "B2": 0.01
+                },
+                "confidence": 0.41
+              }
+            },
+            "usage": {
+              "input_tokens": 1160,
+              "output_tokens": 157,
+              "cost": 4.872e-05
+            },
+            "id": "gen-dec-1792591822-c4MXKQQQ9DOZUXwB2rAV",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 6
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 3.874291699999958,
+      "retries": 0,
+      "confidence": 0.23,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 3.874291699999958,
+          "cache_hit": false,
+          "api_latency": 3.7821390999997675,
+          "cache_latency": null,
+          "request_number": 31,
+          "cost": 4.8846e-05,
+          "dry_run": false,
+          "output": "U",
+          "move": "U",
+          "confidence": 0.23,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U",
+                "probabilities": {
+                  "U": 0.27,
+                  "U'": 0.12,
+                  "U2": 0.13,
+                  "R": 0.08,
+                  "R'": 0.04,
+                  "R2": 0.06,
+                  "F": 0.04,
+                  "F'": 0.02,
+                  "F2": 0.04,
+                  "D": 0.03,
+                  "D'": 0.01,
+                  "D2": 0.02,
+                  "L": 0.04,
+                  "L'": 0.03,
+                  "L2": 0.04,
+                  "B": 0.01,
+                  "B'": 0.01,
+                  "B2": 0.01
+                },
+                "confidence": 0.23
+              }
+            },
+            "usage": {
+              "input_tokens": 1163,
+              "output_tokens": 156,
+              "cost": 4.8846e-05
+            },
+            "id": "gen-dec-1792591826-auHjyMA6kpnuMM0Zs2R1",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 7
+    },
+    {
+      "move": "U'",
+      "valid": true,
+      "latency": 3.193592399999943,
+      "retries": 0,
+      "confidence": 0.44,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 3.193592399999943,
+          "cache_hit": false,
+          "api_latency": 3.082731999999851,
+          "cache_latency": null,
+          "request_number": 34,
+          "cost": 4.9098e-05,
+          "dry_run": false,
+          "output": "U'",
+          "move": "U'",
+          "confidence": 0.44,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U'",
+                "probabilities": {
+                  "U": 0.22999999999999998,
+                  "U'": 0.47,
+                  "U2": 0.060000000000000005,
+                  "R": 0.03,
+                  "R'": 0.01,
+                  "R2": 0.02,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.02,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.01,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.02,
+                  "B": 0.01,
+                  "B'": 0,
+                  "B2": 0.01
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 1169,
+              "output_tokens": 157,
+              "cost": 4.9098e-05
+            },
+            "id": "gen-dec-1792591829-BYlicNb7UTfgh5nivmWe",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 8
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 3.082911299999978,
+      "retries": 0,
+      "confidence": 0.26,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 3.082911299999978,
+          "cache_hit": false,
+          "api_latency": 2.977229399999487,
+          "cache_latency": null,
+          "request_number": 36,
+          "cost": 4.9056e-05,
+          "dry_run": false,
+          "output": "U",
+          "move": "U",
+          "confidence": 0.26,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U",
+                "probabilities": {
+                  "U": 0.3,
+                  "U'": 0.25,
+                  "U2": 0.12,
+                  "R": 0.05,
+                  "R'": 0.03,
+                  "R2": 0.03,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.03,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.02,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.03,
+                  "B": 0.01,
+                  "B'": 0.01,
+                  "B2": 0.01
+                },
+                "confidence": 0.26
+              }
+            },
+            "usage": {
+              "input_tokens": 1168,
+              "output_tokens": 156,
+              "cost": 4.9056e-05
+            },
+            "id": "gen-dec-1792591832-3jb6dQ6zz4rsQA7wEcEA",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 9
+    },
+    {
+      "move": "U'",
+      "valid": true,
+      "latency": 0.06165640000017447,
+      "retries": 0,
+      "confidence": 0.44,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.06165640000017447,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.06152730000030715,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U'",
+          "move": "U'",
+          "confidence": 0.44,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U'",
+                "probabilities": {
+                  "U": 0.22999999999999998,
+                  "U'": 0.47,
+                  "U2": 0.060000000000000005,
+                  "R": 0.03,
+                  "R'": 0.01,
+                  "R2": 0.02,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.02,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.01,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.02,
+                  "B": 0.01,
+                  "B'": 0,
+                  "B2": 0.01
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 1169,
+              "output_tokens": 157,
+              "cost": 4.9098e-05
+            },
+            "id": "gen-dec-1792591829-BYlicNb7UTfgh5nivmWe",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 10
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 0.029945999999654305,
+      "retries": 0,
+      "confidence": 0.26,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.029945999999654305,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.02982960000008461,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U",
+          "move": "U",
+          "confidence": 0.26,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U",
+                "probabilities": {
+                  "U": 0.3,
+                  "U'": 0.25,
+                  "U2": 0.12,
+                  "R": 0.05,
+                  "R'": 0.03,
+                  "R2": 0.03,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.03,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.02,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.03,
+                  "B": 0.01,
+                  "B'": 0.01,
+                  "B2": 0.01
+                },
+                "confidence": 0.26
+              }
+            },
+            "usage": {
+              "input_tokens": 1168,
+              "output_tokens": 156,
+              "cost": 4.9056e-05
+            },
+            "id": "gen-dec-1792591832-3jb6dQ6zz4rsQA7wEcEA",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 11
+    },
+    {
+      "move": "U'",
+      "valid": true,
+      "latency": 0.032555499999944004,
+      "retries": 0,
+      "confidence": 0.44,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.032555499999944004,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.032444000000396045,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U'",
+          "move": "U'",
+          "confidence": 0.44,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U'",
+                "probabilities": {
+                  "U": 0.22999999999999998,
+                  "U'": 0.47,
+                  "U2": 0.060000000000000005,
+                  "R": 0.03,
+                  "R'": 0.01,
+                  "R2": 0.02,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.02,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.01,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.02,
+                  "B": 0.01,
+                  "B'": 0,
+                  "B2": 0.01
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 1169,
+              "output_tokens": 157,
+              "cost": 4.9098e-05
+            },
+            "id": "gen-dec-1792591829-BYlicNb7UTfgh5nivmWe",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 12
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 0.02703159999964555,
+      "retries": 0,
+      "confidence": 0.26,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.02703159999964555,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.02689009999994596,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U",
+          "move": "U",
+          "confidence": 0.26,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U",
+                "probabilities": {
+                  "U": 0.3,
+                  "U'": 0.25,
+                  "U2": 0.12,
+                  "R": 0.05,
+                  "R'": 0.03,
+                  "R2": 0.03,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.03,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.02,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.03,
+                  "B": 0.01,
+                  "B'": 0.01,
+                  "B2": 0.01
+                },
+                "confidence": 0.26
+              }
+            },
+            "usage": {
+              "input_tokens": 1168,
+              "output_tokens": 156,
+              "cost": 4.9056e-05
+            },
+            "id": "gen-dec-1792591832-3jb6dQ6zz4rsQA7wEcEA",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 13
+    },
+    {
+      "move": "U'",
+      "valid": true,
+      "latency": 0.03118019999965327,
+      "retries": 0,
+      "confidence": 0.44,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.03118019999965327,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.0310367000001861,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U'",
+          "move": "U'",
+          "confidence": 0.44,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U'",
+                "probabilities": {
+                  "U": 0.22999999999999998,
+                  "U'": 0.47,
+                  "U2": 0.060000000000000005,
+                  "R": 0.03,
+                  "R'": 0.01,
+                  "R2": 0.02,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.02,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.01,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.02,
+                  "B": 0.01,
+                  "B'": 0,
+                  "B2": 0.01
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 1169,
+              "output_tokens": 157,
+              "cost": 4.9098e-05
+            },
+            "id": "gen-dec-1792591829-BYlicNb7UTfgh5nivmWe",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 14
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 0.02842320000036125,
+      "retries": 0,
+      "confidence": 0.26,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.02842320000036125,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.028283200000259967,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U",
+          "move": "U",
+          "confidence": 0.26,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U",
+                "probabilities": {
+                  "U": 0.3,
+                  "U'": 0.25,
+                  "U2": 0.12,
+                  "R": 0.05,
+                  "R'": 0.03,
+                  "R2": 0.03,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.03,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.02,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.03,
+                  "B": 0.01,
+                  "B'": 0.01,
+                  "B2": 0.01
+                },
+                "confidence": 0.26
+              }
+            },
+            "usage": {
+              "input_tokens": 1168,
+              "output_tokens": 156,
+              "cost": 4.9056e-05
+            },
+            "id": "gen-dec-1792591832-3jb6dQ6zz4rsQA7wEcEA",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 15
+    },
+    {
+      "move": "U'",
+      "valid": true,
+      "latency": 0.03755280000041239,
+      "retries": 0,
+      "confidence": 0.44,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.03755280000041239,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.03737569999975676,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U'",
+          "move": "U'",
+          "confidence": 0.44,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U'",
+                "probabilities": {
+                  "U": 0.22999999999999998,
+                  "U'": 0.47,
+                  "U2": 0.060000000000000005,
+                  "R": 0.03,
+                  "R'": 0.01,
+                  "R2": 0.02,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.02,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.01,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.02,
+                  "B": 0.01,
+                  "B'": 0,
+                  "B2": 0.01
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 1169,
+              "output_tokens": 157,
+              "cost": 4.9098e-05
+            },
+            "id": "gen-dec-1792591829-BYlicNb7UTfgh5nivmWe",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 16
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 0.027571999999963737,
+      "retries": 0,
+      "confidence": 0.26,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.027571999999963737,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.027450300000054995,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U",
+          "move": "U",
+          "confidence": 0.26,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U",
+                "probabilities": {
+                  "U": 0.3,
+                  "U'": 0.25,
+                  "U2": 0.12,
+                  "R": 0.05,
+                  "R'": 0.03,
+                  "R2": 0.03,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.03,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.02,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.03,
+                  "B": 0.01,
+                  "B'": 0.01,
+                  "B2": 0.01
+                },
+                "confidence": 0.26
+              }
+            },
+            "usage": {
+              "input_tokens": 1168,
+              "output_tokens": 156,
+              "cost": 4.9056e-05
+            },
+            "id": "gen-dec-1792591832-3jb6dQ6zz4rsQA7wEcEA",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 17
+    },
+    {
+      "move": "U'",
+      "valid": true,
+      "latency": 0.03228240000044025,
+      "retries": 0,
+      "confidence": 0.44,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.03228240000044025,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.03216639999936888,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U'",
+          "move": "U'",
+          "confidence": 0.44,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U'",
+                "probabilities": {
+                  "U": 0.22999999999999998,
+                  "U'": 0.47,
+                  "U2": 0.060000000000000005,
+                  "R": 0.03,
+                  "R'": 0.01,
+                  "R2": 0.02,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.02,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.01,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.02,
+                  "B": 0.01,
+                  "B'": 0,
+                  "B2": 0.01
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 1169,
+              "output_tokens": 157,
+              "cost": 4.9098e-05
+            },
+            "id": "gen-dec-1792591829-BYlicNb7UTfgh5nivmWe",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 18
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 0.029658800000106567,
+      "retries": 0,
+      "confidence": 0.26,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.029658800000106567,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.02954810000028374,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U",
+          "move": "U",
+          "confidence": 0.26,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U",
+                "probabilities": {
+                  "U": 0.3,
+                  "U'": 0.25,
+                  "U2": 0.12,
+                  "R": 0.05,
+                  "R'": 0.03,
+                  "R2": 0.03,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.03,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.02,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.03,
+                  "B": 0.01,
+                  "B'": 0.01,
+                  "B2": 0.01
+                },
+                "confidence": 0.26
+              }
+            },
+            "usage": {
+              "input_tokens": 1168,
+              "output_tokens": 156,
+              "cost": 4.9056e-05
+            },
+            "id": "gen-dec-1792591832-3jb6dQ6zz4rsQA7wEcEA",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 19
+    },
+    {
+      "move": "U'",
+      "valid": true,
+      "latency": 0.03066729999954987,
+      "retries": 0,
+      "confidence": 0.44,
+      "cache_hit": true,
+      "attempts": [
+        {
+          "latency": 0.03066729999954987,
+          "cache_hit": true,
+          "api_latency": null,
+          "cache_latency": 0.0305700999997498,
+          "request_number": null,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": "U'",
+          "move": "U'",
+          "confidence": 0.44,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "typesafe/jev-1.13-20260917",
+            "answers": {
+              "next_move": {
+                "type": "choice",
+                "choice": "U'",
+                "probabilities": {
+                  "U": 0.22999999999999998,
+                  "U'": 0.47,
+                  "U2": 0.060000000000000005,
+                  "R": 0.03,
+                  "R'": 0.01,
+                  "R2": 0.02,
+                  "F": 0.02,
+                  "F'": 0.01,
+                  "F2": 0.02,
+                  "D": 0.02,
+                  "D'": 0.01,
+                  "D2": 0.01,
+                  "L": 0.03,
+                  "L'": 0.02,
+                  "L2": 0.02,
+                  "B": 0.01,
+                  "B'": 0,
+                  "B2": 0.01
+                },
+                "confidence": 0.44
+              }
+            },
+            "usage": {
+              "input_tokens": 1169,
+              "output_tokens": 157,
+              "cost": 4.9098e-05
+            },
+            "id": "gen-dec-1792591829-BYlicNb7UTfgh5nivmWe",
+            "provider": "TypeSafe"
+          }
+        }
+      ],
+      "number": 20
+    }
+  ],
+  "limit_message": null,
+  "lane": 0
+}

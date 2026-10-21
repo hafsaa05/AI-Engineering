@@ -1,0 +1,192 @@
+{
+  "race_id": "20261021-190926_openrouter-1",
+  "model": "Claude Opus 5.5",
+  "model_id": "anthropic/claude-opus-5.5",
+  "kind": "LLM",
+  "mode": "openrouter",
+  "puzzle_id": "openrouter-1",
+  "puzzle_set": "openrouter",
+  "scramble": [
+    "R",
+    "F",
+    "U"
+  ],
+  "start_state": "LUULUULFFUBBURRFRRURRFFFDDDRRRDDBDDBFFFLLDLLBLLDUBBUBB",
+  "final_state": "LUULUULFFUBBURRFRRURRFFFDDDRRRDDBDDBFFFLLDLLBLLDUBBUBB",
+  "started_at": "2026-10-21T19:09:28",
+  "moves": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "move_count": 5,
+  "latencies": [
+    1.9566374000005453,
+    3.3714369000008446,
+    1.1651504000001296,
+    1.3303142999993725,
+    2.0813999000001786
+  ],
+  "retries": 0,
+  "invalid_outputs": 0,
+  "failed_calls": 5,
+  "confidences": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "api_calls": 5,
+  "cache_hits": 0,
+  "total_cost": 0.0,
+  "api_latencies": [
+    1.9221362999996927,
+    3.345669600000292,
+    1.1338463000001866,
+    1.3123791999996683,
+    2.054826800000228
+  ],
+  "dry_run": false,
+  "total_time": 9.941635600000154,
+  "solved": false,
+  "end_reason": "CALL LIMIT REACHED",
+  "optimal_distance": 3,
+  "optimality_gap": null,
+  "move_log": [
+    {
+      "move": null,
+      "valid": false,
+      "latency": 1.9566374000005453,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 1.9566374000005453,
+          "cache_hit": false,
+          "api_latency": 1.9221362999996927,
+          "cache_latency": null,
+          "request_number": 4,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 27500. To increase, visit https://openrouter.ai/workspaces/default/keys/3466065aab4fdeb46887f563be143e3de2b4a0260e9d5d753b3e1bb19eacb146 and adjust the key's total limi",
+          "raw_response": null
+        }
+      ],
+      "number": 1
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 3.3714369000008446,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 3.3714369000008446,
+          "cache_hit": false,
+          "api_latency": 3.345669600000292,
+          "cache_latency": null,
+          "request_number": 5,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 27500. To increase, visit https://openrouter.ai/workspaces/default/keys/3466065aab4fdeb46887f563be143e3de2b4a0260e9d5d753b3e1bb19eacb146 and adjust the key's total limi",
+          "raw_response": null
+        }
+      ],
+      "number": 2
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 1.1651504000001296,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 1.1651504000001296,
+          "cache_hit": false,
+          "api_latency": 1.1338463000001866,
+          "cache_latency": null,
+          "request_number": 8,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 27500. To increase, visit https://openrouter.ai/workspaces/default/keys/3466065aab4fdeb46887f563be143e3de2b4a0260e9d5d753b3e1bb19eacb146 and adjust the key's total limi",
+          "raw_response": null
+        }
+      ],
+      "number": 3
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 1.3303142999993725,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 1.3303142999993725,
+          "cache_hit": false,
+          "api_latency": 1.3123791999996683,
+          "cache_latency": null,
+          "request_number": 9,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 27500. To increase, visit https://openrouter.ai/workspaces/default/keys/3466065aab4fdeb46887f563be143e3de2b4a0260e9d5d753b3e1bb19eacb146 and adjust the key's total limi",
+          "raw_response": null
+        }
+      ],
+      "number": 4
+    },
+    {
+      "move": null,
+      "valid": false,
+      "latency": 2.0813999000001786,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 2.0813999000001786,
+          "cache_hit": false,
+          "api_latency": 2.054826800000228,
+          "cache_latency": null,
+          "request_number": 10,
+          "cost": 0.0,
+          "dry_run": false,
+          "output": null,
+          "move": null,
+          "confidence": null,
+          "call_failed": true,
+          "error": "HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 27500. To increase, visit https://openrouter.ai/workspaces/default/keys/3466065aab4fdeb46887f563be143e3de2b4a0260e9d5d753b3e1bb19eacb146 and adjust the key's total limi",
+          "raw_response": null
+        }
+      ],
+      "number": 5
+    }
+  ],
+  "limit_message": "anthropic/claude-opus-5.5 has used 5 / 5 requests",
+  "lane": 3
+}

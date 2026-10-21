@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rubik's Cube Race</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="banner">
+    <div class="banner-center">
+      <div class="banner-title">Rubik's Cube Race</div>
+      <div class="banner-student">Hafsa Rashid · 23K-0064 · AI Engineering · Assignment 2</div>
+    </div>
+    <div class="banner-right">
+      <button id="slide-exit" class="slide-exit">Exit slide mode</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls race-controls">
+      <div class="control-group">
+        <label for="mode-select">Mode</label>
+        <select id="mode-select">
+          <option value="ollama">Ollama (local)</option>
+          <option value="openrouter">OpenRouter (real API)</option>
+        </select>
+        <span id="mode-label" class="mode-label"></span>
+      </div>
+
+      <div class="control-group">
+        <label for="puzzle-select">Puzzle</label>
+        <select id="puzzle-select"></select>
+        <button id="race-button" class="primary">Run Live Race</button>
+        <button id="dry-run-button" title="The OpenRouter race without any real API call">Dry run (OpenRouter)</button>
+      </div>
+
+      <div class="control-group">
+        <label for="replay-select">Saved race</label>
+        <select id="replay-select"></select>
+        <select id="speed-select" aria-label="Replay speed"></select>
+        <button id="replay-button">Replay</button>
+      </div>
+
+      <div class="puzzle-info">
+        <div><span class="info-label">Scramble</span> <code id="scramble-text">-</code></div>
+        <div><span class="info-label">Optimal distance</span> <span id="optimal-text">-</span></div>
+        <div id="message" class="message"></div>
+      </div>
+    </section>
+
+    <section id="race-grid" class="race-grid"></section>
+
+    <!-- Results (was the dashboard page): summary, charts, findings, per puzzle table, slide mode -->
+    <section class="controls results-controls">
+      <div class="control-group">
+        <span class="info-label">Results for</span>
+        <span id="results-for">-</span>
+      </div>
+
+      <div class="control-group">
+        <button id="benchmark-button">Run benchmark on this set</button>
+        <span id="benchmark-text" class="empty-note"></span>
+      </div>
+
+      <button id="slide-button" class="primary">Slide mode</button>
+    </section>
+
+    <h1 id="slide-title" class="slide-title"></h1>
+
+    <section class="card">
+      <h2>Summary per model</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Runs</th>
+              <th>Avg latency / move</th>
+              <th>Avg total time</th>
+              <th>Avg moves</th>
+              <th>Success rate</th>
+              <th>Avg optimality gap</th>
+              <th>Invalid outputs</th>
+              <th>Retries</th>
+              <th>API calls</th>
+              <th>Cache hits</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody id="summary-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="chart-grid">
+      <div class="card chart-card"><h2>Avg latency per move (s)</h2><div class="chart-box"><canvas id="chart-latency"></canvas></div></div>
+      <div class="card chart-card"><h2>Avg total time (s)</h2><div class="chart-box"><canvas id="chart-time"></canvas></div></div>
+      <div class="card chart-card"><h2>Success rate (%)</h2><div class="chart-box"><canvas id="chart-success"></canvas></div></div>
+      <div class="card chart-card"><h2>Avg optimality gap (moves)</h2><div class="chart-box"><canvas id="chart-gap"></canvas><p id="gap-note" class="chart-note" hidden>No model solved a puzzle, so the optimality gap is not defined.</p></div></div>
+    </section>
+
+    <section class="card">
+      <h2>Key findings</h2>
+      <ul id="findings" class="findings"></ul>
+    </section>
+
+    <section class="card per-puzzle">
+      <h2>Per puzzle results (latest run of each model)</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead id="puzzle-head"></thead>
+          <tbody id="puzzle-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- 2D net of all six faces, opened from a panel -->
+  <div id="net-dialog" class="net-dialog" hidden>
+    <div class="net-box">
+      <div class="net-header">
+        <h2 id="net-title">Cube net</h2>
+        <button id="net-close">Close</button>
+      </div>
+      <div id="net-view" class="net"></div>
+    </div>
+  </div>
+
+  <template id="panel-template">
+    <article class="panel">
+      <div class="panel-header">
+        <span class="avatar"></span>
+        <h2 class="model-name"></h2>
+        <span class="kind-badge"></span>
+        <button class="net-button">2D net</button>
+      </div>
+
+      <div class="panel-body">
+        <div class="cube-area">
+          <span class="rank-medal" hidden><span class="rank-num"></span><sup class="rank-suffix"></sup></span>
+          <div class="cube-scene"><div class="cube"></div></div>
+          <span class="end-pill" hidden></span>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Time</div>
+          <div class="timer">0:00.00</div>
+          <div class="stat-label">Moves</div>
+          <div class="move-count"><span class="moves-used">0</span><span class="moves-max"></span></div>
+          <div class="last-move">Last move: <span class="current-move">-</span></div>
+          <div class="status">ready</div>
+          <div class="mini-stats">
+            <span><span class="stat-label">API calls</span><b class="api-calls">-</b></span>
+            <span><span class="stat-label">Cache hits</span><b class="cache-hits">0</b></span>
+            <span><span class="stat-label">Cost</span><b class="cost">-</b></span>
+            <span><span class="stat-label">Avg / move</span><b class="avg-latency">-</b></span>
+            <span><span class="stat-label">Opt. gap</span><b class="gap">-</b></span>
+          </div>
+        </div>
+      </div>
+
+      <ol class="history"></ol>
+    </article>
+  </template>
+
+  <script src="common.js"></script>
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+{
+  "seed": 64,
+  "puzzles": [
+    {
+      "id": "warmup-1",
+      "set": "warmup",
+      "scramble": [
+        "R",
+        "L",
+        "B2",
+        "U"
+      ],
+      "scramble_length": 4,
+      "state": "BBBUUDFFFDBURRLRRLRRLUFDUFDFDBFDBFUBUFDRLLRLLRLLDBUDBU",
+      "optimal_distance": 4
+    },
+    {
+      "id": "warmup-2",
+      "set": "warmup",
+      "scramble": [
+        "F2",
+        "R'",
+        "U2"
+      ],
+      "scramble_length": 3,
+      "state": "BDDBUUBUULLRRRRLLLDBBFFUFFDUUFDDFDDFRRRLLRLLRFFUDBBUBB",
+      "optimal_distance": 3
+    },
+    {
+      "id": "warmup-3",
+      "set": "warmup",
+      "scramble": [
+        "L2",
+        "F",
+        "U",
+        "L"
+      ],
+      "scramble_length": 4,
+      "state": "FDDFUUUUUBBFURRURRLRRLFFLFFDRRFDDFDDLLBLLBDDBLLUBBUBBR",
+      "optimal_distance": 4
+    },
+    {
+      "id": "primary-1",
+      "set": "primary",
+      "scramble": [
+        "U2",
+        "R2",
+        "U'",
+        "F2"
+      ],
+      "scramble_length": 4,
+      "state": "DDDUUUUDDLBBLRRFLLFFFBFFRRRUUUDDUDDUFFLLLRLLBRRRFBBBBB",
+      "optimal_distance": 4
+    },
+    {
+      "id": "primary-2",
+      "set": "primary",
+      "scramble": [
+        "B2",
+        "F",
+        "U2",
+        "L2"
+      ],
+      "scramble_length": 4,
+      "state": "RLLDUUUDDRLDURLURLBBBBFFFFFLRRUDDDUUDLRDLRLRUFFFBBFBBB",
+      "optimal_distance": 4
+    },
+    {
+      "id": "primary-3",
+      "set": "primary",
+      "scramble": [
+        "F",
+        "D",
+        "R'",
+        "B2",
+        "L'"
+      ],
+      "scramble_length": 5,
+      "state": "FDDFUBLLBRRBRRLUULDFUDFUULLRDFRDFRUUDDBLLBFFFRRLBBUBBD",
+      "optimal_distance": 5
+    },
+    {
+      "id": "primary-4",
+      "set": "primary",
+      "scramble": [
+        "B'",
+        "D",
+        "B",
+        "R2",
+        "U'"
+      ],
+      "scramble_length": 5,
+      "state": "DDBUUUUUUFFUDRRDRRLLLFFRDLRRDFRDUDDULBBLLLLBBRFFFBBFBB",
+      "optimal_distance": 5
+    },
+    {
+      "id": "primary-5",
+      "set": "primary",
+      "scramble": [
+        "F'",
+        "L2",
+        "R2",
+        "F"
+      ],
+      "scramble_length": 4,
+      "state": "LULDUDLLLDRDRRDDRDBBBFFFBBBRRRUDURDRULUULLULUFBFFBFFBF",
+      "optimal_distance": 4
+    },
+    {
+      "id": "primary-6",
+      "set": "primary",
+      "scramble": [
+        "U'",
+        "F2",
+        "U",
+        "D"
+      ],
+      "scramble_length": 4,
+      "state": "DUUDUUDUURRRLRRLLLLFFFFFLLFDDUDDUDDUFFFLLRBBBBBRBBBBRR",
+      "optimal_distance": 4
+    },
+    {
+      "id": "primary-7",
+      "set": "primary",
+      "scramble": [
+        "R2",
+        "D",
+        "F'",
+        "R'"
+      ],
+      "scramble_length": 4,
+      "state": "UURUUFRRFRRBRRFDDDBBDFFDFFFLLLDDLUULLLDLLUFBUUBBDBBBRR",
+      "optimal_distance": 4
+    },
+    {
+      "id": "primary-8",
+      "set": "primary",
+      "scramble": [
+        "L'",
+        "D",
+        "R2",
+        "F2",
+        "R'"
+      ],
+      "scramble_length": 5,
+      "state": "FUFFUFUBLDRRFRRULLBLBBFDRFBDULDDDDDDLLRLLRBBFUBUUBUFRR",
+      "optimal_distance": 5
+    },
+    {
+      "id": "primary-9",
+      "set": "primary",
+      "scramble": [
+        "D",
+        "U'",
+        "R'",
+        "U'"
+      ],
+      "scramble_length": 4,
+      "state": "RBRUUUUUULLUFRFFRFBBBFFULLUDDLDDFDDLDRRLLLBBBFRFDBBDRR",
+      "optimal_distance": 4
+    },
+    {
+      "id": "primary-10",
+      "set": "primary",
+      "scramble": [
+        "R",
+        "B'",
+        "U'",
+        "R2"
+      ],
+      "scramble_length": 4,
+      "state": "LFBLUBLURFRRURRDFFDLUFFBFFRDDFDDURRUBBBDLLBLLDRUDBBLUU",
+      "optimal_distance": 4
+    },
+    {
+      "id": "extension-1",
+      "set": "extension",
+      "scramble": [
+        "B2",
+        "F2",
+        "L'",
+        "B",
+        "U'",
+        "B",
+        "D'",
+        "B'",
+        "U'",
+        "B2",
+        "D'",
+        "R'",
+        "B'",
+        "D'",
+        "B'",
+        "R'",
+        "L"
+      ],
+      "scramble_length": 17,
+      "state": "LUDRUBRLFLUBBRDBRFDBUUFRULLBFUDDFDLRFDFBLRLLRRFDFBDUUB",
+      "optimal_distance": null
+    },
+    {
+      "id": "extension-2",
+      "set": "extension",
+      "scramble": [
+        "D2",
+        "R'",
+        "D'",
+        "L'",
+        "U",
+        "D",
+        "R2",
+        "L",
+        "R2",
+        "B'",
+        "F'",
+        "B",
+        "F2",
+        "L2",
+        "U2",
+        "D'",
+        "F2",
+        "U"
+      ],
+      "scramble_length": 18,
+      "state": "BUFFUFDDLBURRRLUFBLBURFDBLLDFFRDDFUULRFBLBDURUBDDBLRLR",
+      "optimal_distance": null
+    },
+    {
+      "id": "extension-3",
+      "set": "extension",
+      "scramble": [
+        "D2",
+        "R",
+        "B",
+        "D2",
+        "B",
+        "R",
+        "U'",
+        "B2",
+        "U2",
+        "B'",
+        "R",
+        "L'",
+        "R",
+        "L",
+        "R2",
+        "B'",
+        "R'",
+        "D"
+      ],
+      "scramble_length": 18,
+      "state": "DDLUUFFUULRFFRDFBBUBBFFDURDBBRUDLLDRBFRRLLDLRULLBBUDRF",
+      "optimal_distance": null
+    },
+    {
+      "id": "openrouter-1",
+      "set": "openrouter",
+      "scramble": [
+        "R",
+        "F",
+        "U"
+      ],
+      "scramble_length": 3,
+      "state": "LUULUULFFUBBURRFRRURRFFFDDDRRRDDBDDBFFFLLDLLBLLDUBBUBB",
+      "optimal_distance": 3
+    },
+    {
+      "id": "ollama-1",
+      "set": "ollama",
+      "scramble": [
+        "F'",
+        "R'",
+        "L"
+      ],
+      "scramble_length": 3,
+      "state": "BUBBUBBRBRRRRRRDDDUFUUFURFRFLFFDFFDFLLLLLLUUUDBDDBDLBL",
+      "optimal_distance": 3
+    },
+    {
+      "id": "ollama-2",
+      "set": "ollama",
+      "scramble": [
+        "F",
+        "B'",
+        "L'"
+      ],
+      "scramble_length": 3,
+      "state": "FLLFUUFLLURUURUURURFFDFFRFFBRRBDDBRRDDDLLLDDDBBLBBUBBL",
+      "optimal_distance": 3
+    },
+    {
+      "id": "ollama-3",
+      "set": "ollama",
+      "scramble": [
+        "U",
+        "D",
+        "L'"
+      ],
+      "scramble_length": 3,
+      "state": "RUUFUULUUBBBRRRFFFDRRDFFDLLRDDBDDLDDFLBFLBFLBLLUBBURRU",
+      "optimal_distance": 3
+    },
+    {
+      "id": "ollama-4",
+      "set": "ollama",
+      "scramble": [
+        "B",
+        "U",
+        "D'"
+      ],
+      "scramble_length": 3,
+      "state": "UURUURUURBBBRRDBBBRRDFFFRRDDDLDDLDDLFFFULLFFFULLBBBULL",
+      "optimal_distance": 3
+    },
+    {
+      "id": "ollama-5",
+      "set": "ollama",
+      "scramble": [
+        "L'",
+        "D'",
+        "R'"
+      ],
+      "scramble_length": 3,
+      "state": "FULFUBFUBRRURRBRRBDFUDFURRUDDFDDFBBRLLLLLLDFFBBUDBUDLL",
+      "optimal_distance": 3
+    }
+  ]
+}

@@ -1,0 +1,941 @@
+{
+  "race_id": "20261021-215056_ollama-5",
+  "model": "Qwen3.5 0.8B",
+  "model_id": "qwen3.5:0.8b",
+  "kind": "LLM",
+  "mode": "ollama",
+  "puzzle_id": "ollama-5",
+  "puzzle_set": "ollama",
+  "scramble": [
+    "L'",
+    "D'",
+    "R'"
+  ],
+  "start_state": "FULFUBFUBRRURRBRRBDFUDFURRUDDFDDFBBRLLLLLLDFFBBUDBUDLL",
+  "final_state": "LDFLUFUUDLLRRRBURBBBFRFUFFBRULDDFBBRUDRLLBDFDURFDBUDLL",
+  "started_at": "2026-10-21T21:52:46",
+  "moves": [
+    "F",
+    "F",
+    "U",
+    "U",
+    "F",
+    "U",
+    "U",
+    "U",
+    "F",
+    "F",
+    "U",
+    "F",
+    "F",
+    "F",
+    "F",
+    "F",
+    "F",
+    "F",
+    "F",
+    "F"
+  ],
+  "move_count": 20,
+  "latencies": [
+    13.625461199999336,
+    9.949507999999696,
+    10.394195200000468,
+    10.321658199998637,
+    10.641456000001199,
+    10.431236200000058,
+    10.24796620000052,
+    10.23753190000025,
+    10.409940700001243,
+    10.682386600001337,
+    10.85099259999879,
+    10.508009899998797,
+    10.999598200000037,
+    10.459705799999938,
+    10.805810199999542,
+    10.954407100000026,
+    9.74731470000006,
+    9.965028800001164,
+    9.861778599999525,
+    9.760875999998461
+  ],
+  "retries": 0,
+  "invalid_outputs": 0,
+  "failed_calls": 0,
+  "confidences": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "api_calls": 0,
+  "cache_hits": 0,
+  "total_cost": 0.0,
+  "api_latencies": [],
+  "dry_run": false,
+  "total_time": 210.85577980000016,
+  "solved": false,
+  "end_reason": "RAN OUT OF MOVES",
+  "optimal_distance": 3,
+  "optimality_gap": null,
+  "move_log": [
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 13.625461199999336,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 13.625461199999336,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:52:59.9236924Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 13029116100,
+            "load_duration": 3887115800,
+            "prompt_eval_count": 828,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 8739639000,
+            "eval_count": 7,
+            "eval_duration": 390195000
+          }
+        }
+      ],
+      "number": 1
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 9.949507999999696,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 9.949507999999696,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:53:09.8732868Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9416696000,
+            "load_duration": 12327100,
+            "prompt_eval_count": 835,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9146857000,
+            "eval_count": 7,
+            "eval_duration": 228255000
+          }
+        }
+      ],
+      "number": 2
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 10.394195200000468,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.394195200000468,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "U",
+          "move": "U",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:53:20.2675182Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"U\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9867023400,
+            "load_duration": 13084500,
+            "prompt_eval_count": 842,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9436332000,
+            "eval_count": 7,
+            "eval_duration": 385828000
+          }
+        }
+      ],
+      "number": 3
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 10.321658199998637,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.321658199998637,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "U",
+          "move": "U",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:53:30.5892544Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"U\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9798377700,
+            "load_duration": 13760600,
+            "prompt_eval_count": 847,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9521265000,
+            "eval_count": 7,
+            "eval_duration": 227045000
+          }
+        }
+      ],
+      "number": 4
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 10.641456000001199,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.641456000001199,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:53:41.2286842Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 10132825700,
+            "load_duration": 13213400,
+            "prompt_eval_count": 852,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9700953000,
+            "eval_count": 7,
+            "eval_duration": 383911000
+          }
+        }
+      ],
+      "number": 5
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 10.431236200000058,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.431236200000058,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "U",
+          "move": "U",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:53:51.6621726Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"U\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9896652700,
+            "load_duration": 16363300,
+            "prompt_eval_count": 856,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9452666000,
+            "eval_count": 7,
+            "eval_duration": 389435000
+          }
+        }
+      ],
+      "number": 6
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 10.24796620000052,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.24796620000052,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "U",
+          "move": "U",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:54:01.9100151Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"U\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9707448100,
+            "load_duration": 13415500,
+            "prompt_eval_count": 856,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9429333000,
+            "eval_count": 7,
+            "eval_duration": 229994000
+          }
+        }
+      ],
+      "number": 7
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 10.23753190000025,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.23753190000025,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "U",
+          "move": "U",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:54:12.1472612Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"U\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9710623800,
+            "load_duration": 12229500,
+            "prompt_eval_count": 856,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9429932000,
+            "eval_count": 7,
+            "eval_duration": 228024000
+          }
+        }
+      ],
+      "number": 8
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 10.409940700001243,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.409940700001243,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:54:22.5574915Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9859864100,
+            "load_duration": 12240700,
+            "prompt_eval_count": 857,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9408765000,
+            "eval_count": 7,
+            "eval_duration": 407497000
+          }
+        }
+      ],
+      "number": 9
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 10.682386600001337,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.682386600001337,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:54:33.2398653Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 10137281700,
+            "load_duration": 13636000,
+            "prompt_eval_count": 855,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9630866000,
+            "eval_count": 7,
+            "eval_duration": 461905000
+          }
+        }
+      ],
+      "number": 10
+    },
+    {
+      "move": "U",
+      "valid": true,
+      "latency": 10.85099259999879,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.85099259999879,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "U",
+          "move": "U",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:54:44.0911642Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"U\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 10217753200,
+            "load_duration": 21800300,
+            "prompt_eval_count": 855,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9915339000,
+            "eval_count": 7,
+            "eval_duration": 239276000
+          }
+        }
+      ],
+      "number": 11
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 10.508009899998797,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.508009899998797,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:54:54.5993549Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 10002883500,
+            "load_duration": 12583500,
+            "prompt_eval_count": 856,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9567371000,
+            "eval_count": 7,
+            "eval_duration": 387528000
+          }
+        }
+      ],
+      "number": 12
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 10.999598200000037,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.999598200000037,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:55:05.5980735Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 10462932500,
+            "load_duration": 12934900,
+            "prompt_eval_count": 858,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9954031000,
+            "eval_count": 7,
+            "eval_duration": 464651000
+          }
+        }
+      ],
+      "number": 13
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 10.459705799999938,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.459705799999938,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:55:16.0586347Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9764429700,
+            "load_duration": 15225800,
+            "prompt_eval_count": 858,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9482472000,
+            "eval_count": 7,
+            "eval_duration": 225759000
+          }
+        }
+      ],
+      "number": 14
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 10.805810199999542,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.805810199999542,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:55:26.8641427Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 10283687900,
+            "load_duration": 13031400,
+            "prompt_eval_count": 857,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9853730000,
+            "eval_count": 7,
+            "eval_duration": 384885000
+          }
+        }
+      ],
+      "number": 15
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 10.954407100000026,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 10.954407100000026,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:55:37.8191242Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 10227219900,
+            "load_duration": 33526500,
+            "prompt_eval_count": 856,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9741376000,
+            "eval_count": 7,
+            "eval_duration": 360493000
+          }
+        }
+      ],
+      "number": 16
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 9.74731470000006,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 9.74731470000006,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:55:47.5666352Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9429198600,
+            "load_duration": 5391200,
+            "prompt_eval_count": 858,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9172857000,
+            "eval_count": 7,
+            "eval_duration": 220184000
+          }
+        }
+      ],
+      "number": 17
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 9.965028800001164,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 9.965028800001164,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:55:57.5317447Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\n\"move\": \"F\"\n}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9553727700,
+            "load_duration": 6860500,
+            "prompt_eval_count": 858,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 8999285000,
+            "eval_count": 11,
+            "eval_duration": 516644000
+          }
+        }
+      ],
+      "number": 18
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 9.861778599999525,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 9.861778599999525,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:56:07.39324Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9471903900,
+            "load_duration": 3749800,
+            "prompt_eval_count": 857,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9221160000,
+            "eval_count": 7,
+            "eval_duration": 216819000
+          }
+        }
+      ],
+      "number": 19
+    },
+    {
+      "move": "F",
+      "valid": true,
+      "latency": 9.760875999998461,
+      "retries": 0,
+      "confidence": null,
+      "cache_hit": false,
+      "attempts": [
+        {
+          "latency": 9.760875999998461,
+          "cache_hit": null,
+          "api_latency": null,
+          "cache_latency": null,
+          "request_number": null,
+          "cost": null,
+          "dry_run": null,
+          "output": "F",
+          "move": "F",
+          "confidence": null,
+          "call_failed": false,
+          "error": null,
+          "raw_response": {
+            "model": "qwen3.5:0.8b",
+            "created_at": "2026-10-21T16:56:17.1543483Z",
+            "message": {
+              "role": "assistant",
+              "content": "{\"move\": \"F\"}"
+            },
+            "done": true,
+            "done_reason": "stop",
+            "total_duration": 9346966600,
+            "load_duration": 5825300,
+            "prompt_eval_count": 856,
+            "prompt_eval_cached_count": 0,
+            "prompt_eval_duration": 9104808000,
+            "eval_count": 7,
+            "eval_duration": 199567000
+          }
+        }
+      ],
+      "number": 20
+    }
+  ],
+  "limit_message": null,
+  "lane": 1
+}

@@ -1,1 +1,24 @@
+# Secrets
+.env
 
+# Half-written temp file while the usage counter or cache is being saved
+data/*.tmp
+
+# Results from mock model runs (real model results are kept)
+results/*_mock-*.json
+
+# Assignment reference screenshots
+ref-*.png
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

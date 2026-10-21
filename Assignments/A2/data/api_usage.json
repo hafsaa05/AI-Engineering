@@ -1,0 +1,11 @@
+{
+  "total": 48,
+  "per_model": {
+    "typesafe/jev-1.13": 9,
+    "openai/gpt-6-luna-decisions": 20,
+    "cloudflare/clef": 14,
+    "anthropic/claude-opus-5.5": 5
+  },
+  "cache_hits": 17,
+  "total_cost": 0.0012894840000000002
+}
