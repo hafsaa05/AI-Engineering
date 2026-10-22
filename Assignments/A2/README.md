@@ -4,9 +4,7 @@ AI Engineering Assignment 02 | Hafsa Rashid | 23K-0064
 
 ## 🎥 Demo Video
 
-**Watch online:** [Google Drive link](https://drive.google.com/file/d/1KWW2x6Ek-NvBgvku_ftuBjQFE8_uBk8m/view?usp=sharing)
-
-**In this repository:** [demo/AIE_A2_Demo_HafsaRashid_23K-0064.mp4](demo/AIE_A2_Demo_HafsaRashid_23K-0064.mp4)
+**Watch online:** [Google Drive link](https://drive.google.com/file/d/1JDPy8b9V-gSX0zZqTl8ac-Q9JFrhtpDk/view?usp=drive_link)
 
 Model IDs verified on the OpenRouter model pages on 21 Oct 2026. Jev, Luna and Clef run on the Decisions API; Opus runs on chat completions.
 
@@ -28,19 +26,6 @@ The four models are:
 
 Everything is on one page: the live race (four panels, one cube per model) at the top, and below it the results with tables, charts and a slide for the final results.
 
-## Teacher's rules for the OpenRouter API key
-
-These rules come from my teacher and are enforced in the backend code, not only in the GUI:
-
-1. **Nobody but me starts a real OpenRouter run.** All tests use mocks or fake responses and are blocked from the network. The real run is started once, by me, from the GUI.
-2. **Mode switch.** The **Mode** dropdown on the race screen switches between Ollama and OpenRouter while the server runs. `MODE` in `.env` (`ollama` by default, `mock` for testing) is only the starting value. Having a key in `.env` does not switch on real mode by itself: real calls need OpenRouter mode **and** the key. The mode can not change while a race is running, and it is always shown on the page.
-3. **Puzzles.** The `openrouter` set has exactly 1 puzzle, 3 moves from solved. The `ollama` set has 5 puzzles, each 3 moves from solved. The older sets stay for mock testing.
-4. **Move limit:** 20 moves per run, in every mode.
-5. **Hard request limits (OpenRouter only):** Claude at most 5 requests in total, each decision model at most 20, all together at most 65, for the whole experiment. Failed requests and retries count too. OpenRouter has 0 retries, so an invalid answer just uses up a move. A model that reaches its limit stops at once and is marked NOT SOLVED with the reason **CALL LIMIT REACHED**.
-6. **Persistent counter** in `data/api_usage.json`, checked before every request, never reset (there is no reset button).
-7. **Cache** in `data/api_cache.json`. A request that was already answered is never sent again and does not count.
-8. **Logging** of latency, cache hits, request numbers and the real cost from the API's `usage` field.
-9. **Safety.** The real race only starts after a confirmation question, and there is a **Dry run** button to check everything first.
 
 ## Setup
 
@@ -50,24 +35,24 @@ You need Python 3.10 or newer.
 
 2. Create and turn on a virtual environment:
 
-   ```
+```
    python -m venv .venv
    .venv\Scripts\activate          (Windows)
    source .venv/bin/activate       (Mac / Linux)
-   ```
+```
 
 3. Install the packages:
 
-   ```
+```
    pip install -r requirements.txt
-   ```
+```
 
 4. Make your `.env` file from the example:
 
-   ```
+```
    copy .env.example .env          (Windows)
    cp .env.example .env            (Mac / Linux)
-   ```
+```
 
    Add the OpenRouter key if you have one. `MODE` is optional: it is only the starting mode (default `ollama`), and you can switch modes later from the GUI (see [Modes](#modes-mock-ollama-and-openrouter) below). The key is only needed for OpenRouter mode. It is only read by the backend, never goes to the browser, and `.env` is in `.gitignore`.
 
@@ -149,12 +134,12 @@ The **Mode** dropdown on the race screen decides which four models race. The cho
   1. Download and install Ollama from [ollama.com/download](https://ollama.com/download), then start the Ollama app (or run `ollama serve`).
   2. Pull the four models (about 13 GB in total):
 
-     ```
+```
      ollama pull clef-flash:latest
      ollama pull qwen3.5:0.8b
      ollama pull deepseek-r1:1.5b
      ollama pull gemma3:1b
-     ```
+```
 
   3. Check with `ollama list`. If Ollama is not running, or a model is missing, the race screen shows a clear message (for example "Run: ollama pull gemma3:1b") instead of crashing.
 
@@ -217,21 +202,21 @@ Both runs used a puzzle that is exactly 3 moves from solved (BFS optimum = 3). E
 
 **OpenRouter run (openrouter-1, 3 moves from solved, 20 move limit)**
 
-All four models were run on the same puzzle with the same rules. The OpenRouter key had strict limits (65 requests in total, 5 for Claude, and a small credit balance), and this affected two of the models:
+All four models were run on the same puzzle (scramble `R F U`) with the same rules. The OpenRouter key had strict limits (65 requests in total, 5 for Claude, and a small credit balance):
 
+- Claude Opus 5.5 solved the cube in 3 moves (U', F', R'), exactly the BFS optimum, using only 3 of its 5 allowed requests: 11.74s per move on average, 35.22s in total, cost $0.0348.
 - Jev 1.13 played all 20 moves: 9 API calls and 11 cache hits, 3.43s per move on average, 68.52s in total, cost $0.0003.
 - Cloudflare Clef played all 20 moves: 14 API calls and 6 cache hits, 3.07s per move on average, 61.42s in total, cost $0.0009.
 - GPT-6 Luna Decisions used 20 API calls, but the provider rejected the requests (HTTP 502), so it could not make a valid move.
-- Claude Opus 5.5 did not make a valid move: its requests were rejected because of the key’s credit limit (HTTP 402), and it then reached the 5 call Claude limit.
 
-| Rank | Model | Type | End reason | Moves (valid) | Avg latency / move | Total time | Correct stickers | API calls | Cache hits | Failed calls | Cost |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | Claude Opus 5.5 | Frontier LLM | CALL LIMIT REACHED | 5 (0) | 1.98s | 9.9s | 23 | 5 | 0 | 5 | $0.0000 |
-| 2 | Jev 1.13 | Decision model | RAN OUT OF MOVES | 20 (18) | 3.43s | 68.5s | 23 | 9 | 11 | 2 | $0.0003 |
-| 3 | GPT-6 Luna Decisions | Decision model | RAN OUT OF MOVES | 20 (0) | 6.65s | 133.0s | 23 | 20 | 0 | 20 | $0.0000 |
-| 4 | Cloudflare Clef | Decision model | RAN OUT OF MOVES | 20 (19) | 3.07s | 61.4s | 20 | 14 | 6 | 1 | $0.0009 |
+| Rank | Model | Type | End reason | Moves (valid) | Avg latency / move | Total time | Correct stickers | Optimality gap | API calls | Cache hits | Failed calls | Cost |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Claude Opus 5.5 | Frontier LLM | SOLVED | 3 (3) | 11.74s | 35.2s | 54 | 0 | 3 | 0 | 0 | $0.0348 |
+| 2 | Jev 1.13 | Decision model | RAN OUT OF MOVES | 20 (18) | 3.43s | 68.5s | 23 | - | 9 | 11 | 2 | $0.0003 |
+| 3 | GPT-6 Luna Decisions | Decision model | RAN OUT OF MOVES | 20 (0) | 6.65s | 133.0s | 23 | - | 20 | 0 | 20 | $0.0000 |
+| 4 | Cloudflare Clef | Decision model | RAN OUT OF MOVES | 20 (19) | 3.07s | 61.4s | 20 | - | 14 | 6 | 1 | $0.0009 |
 
-In total the run used 48 of the 65 allowed requests, with 17 cache hits and a total logged cost of about $0.0013. The cache saved 17 paid requests, which shows why caching mattered with such a limited key.
+In total the run used 46 of the 65 allowed requests, with 17 cache hits and a total logged cost of about $0.0360. The cache saved 17 paid requests, which shows why caching mattered with such a limited key. Almost all of the cost (about 97%) came from Opus's 3 requests.
 
 **Ollama results (Ollama set, local models on a laptop CPU)**
 
@@ -249,9 +234,9 @@ Ollama has no API calls or cost, and every puzzle was 3 moves from solved, so no
 Key findings:
 
 - Fastest model: on OpenRouter, Cloudflare Clef was the fastest model that actually answered (3.07s per move). On Ollama, Gemma3 1B (5.54s per move).
-- Highest solve rate: no model solved the puzzle (0% for all eight models).
-- Closest to optimal: not defined, because no model solved the puzzle.
-- Was the fastest also the best? Can't tell, because no model solved the puzzle. No model ended with more correct stickers than it started with.
+- Highest solve rate: Claude Opus 5.5, 100% (1 of 1). Every other model, on OpenRouter and on Ollama, stayed at 0%.
+- Closest to optimal: Claude Opus 5.5, with an optimality gap of 0 (3 moves, the BFS optimum).
+- Was the fastest also the best? No. The fastest model per move (Cloudflare Clef) never solved the cube, while the slowest working model per move (Opus) solved it optimally, and also finished in less total time (35.2s against Clef's 61.4s).
 
 Warm up and extension notes: the real models only ran on `openrouter-1` (OpenRouter) and `ollama-1` to `ollama-5` (Ollama), because of the API call limits and the slow local models. The warm up, primary and extension sets were used with the mock models for testing.
 
@@ -259,25 +244,25 @@ Warm up and extension notes: the real models only ran on `openrouter-1` (OpenRou
 
 **1. Which model is fastest in terms of making decisions?**
 
-On OpenRouter, Cloudflare Clef was the fastest model that actually answered, at about 3.07s per move, followed by Jev 1.13 at 3.43s. On Ollama (laptop CPU), Gemma3 1B was the fastest at 5.54s per move, then Qwen3.5 0.8B at 7.32s. DeepSeek-R1 1.5B (57.8s) and Clef Flash (95.9s) were much slower. DeepSeek is slow because it thinks before answering. Clef Flash is a large model for a laptop, and it never actually answered: all of its calls failed, so its 95.9s is time spent on failed calls, not on decisions.
+On OpenRouter, Cloudflare Clef was the fastest per move, at about 3.07s, followed by Jev 1.13 at 3.43s. Claude Opus 5.5 was the slowest working model per move (11.74s, almost 4 times slower than Clef), because it plans each move before answering. On Ollama (laptop CPU), Gemma3 1B was the fastest at 5.54s per move, then Qwen3.5 0.8B at 7.32s. DeepSeek-R1 1.5B (57.8s) and Clef Flash (95.9s) were much slower. DeepSeek is slow because it thinks before answering. Clef Flash is a large model for a laptop, and it never actually answered: all of its calls failed, so its 95.9s is time spent on failed calls, not on decisions.
 
 **2. Which model achieved the highest solve rate?**
 
-No model solved the cube, so the solve rate was 0% for every model, even though each cube was only 3 moves away from solved. Jev, Clef, Gemma and Qwen used all 20 moves, DeepSeek-R1 and Clef Flash ran out of time, and on OpenRouter, Luna and Opus could not make a valid move because of API limits.
+Claude Opus 5.5, with 100%: it solved the OpenRouter puzzle in 3 moves. Every other model stayed at 0%, even though each cube was only 3 moves away from solved. Jev, Clef, Gemma and Qwen used all 20 moves, DeepSeek-R1 and Clef Flash ran out of time, and Luna could not make a valid move because the provider rejected its requests. Since Opus only ran on one puzzle, its 100% comes from a single trial.
 
 **3. Which model found the shortest solutions, and how close were they to the known optimum?**
 
-The known optimum from BFS was 3 moves for every puzzle, but since no model solved a cube, no optimality gap could be calculated. Looking at the moves, the fast models mostly repeated the same move or switched between a move and its opposite (for example Jev kept playing U and U’, and Gemma played U’ over and over), so they almost never got closer to the solved state. The only run that ended closer was Qwen3.5 on ollama-3 (from 22 to 29 correct stickers out of 54), and it still did not solve the cube.
+Claude Opus 5.5 found the shortest solution: U', F', R', which undoes the scramble R F U exactly. That is 3 moves, the same as the BFS optimum, so its optimality gap is 0. No other model solved a cube, so no other gap could be calculated. Looking at their moves, the fast models mostly repeated the same move or switched between a move and its opposite (for example Jev kept playing U and U', and Gemma played U' over and over), so they almost never got closer to the solved state. The only run that ended closer was Qwen3.5 on ollama-3 (from 22 to 29 correct stickers out of 54), and it still did not solve the cube.
 
 **4. Did the fastest model also achieve the best solution quality?**
 
-No. The fastest models (Clef on OpenRouter, Gemma3 on Ollama) answered quickly, but their moves did not move the cube toward the solution. In this experiment, being fast did not mean making good decisions: speed without planning just produced loops.
+No. The fastest models (Clef on OpenRouter, Gemma3 on Ollama) answered quickly, but their moves did not move the cube toward the solution. The slowest working model per move, Claude Opus 5.5, was the only one that solved the cube, and it did it optimally. It even finished in less total time than Clef (35.2s against 61.4s), because it needed only 3 moves while Clef used all 20. So being slow per move did not mean being slow overall: speed without planning just produced loops, while planning reached the goal faster.
 
 **5. Would you use the fastest decision model, the frontier LLM, or a hybrid agent in a real-world application? What evidence supports your choice?**
 
-I would use a hybrid agent. My results show that the fast models alone could not solve even a 3 move cube: they were cheap and quick, but got stuck repeating moves. A frontier LLM is expensive and, as this experiment showed, limited by API calls and credit, so it can’t be called for every small step. A better design is to let a reliable tool (like the BFS solver I already use to find the optimum) handle the hard planning, use a cheap fast model for simple routine steps, and only call the expensive LLM when the agent is stuck. This keeps quality high while keeping cost and latency low.
+I would use a hybrid agent. My results show that the fast models alone could not solve even a 3 move cube: they were cheap and quick, but got stuck repeating moves. The frontier LLM solved it perfectly, but it was almost 4 times slower per move and much more expensive: Opus's 3 requests cost about $0.0348, while all the decision model requests together cost about $0.0012. Calling it for every small step in a long task would quickly use up the budget. A better design is to use a cheap fast model for simple routine steps, and call the LLM for planning or whenever the fast model starts looping, with a reliable tool (like the BFS solver I already use) as a checker. This keeps the quality of the LLM while keeping cost and latency low.
 
-Limitations: only one OpenRouter puzzle because of the API call limits; two OpenRouter models could not make valid moves; the Ollama models ran on a laptop CPU, so their latency is much higher than on a GPU, and Clef Flash was too big for the laptop’s memory, so none of its calls succeeded.
+Limitations: only one OpenRouter puzzle because of the API call limits, so Opus's 100% comes from a single trial; GPT-6 Luna Decisions could not make valid moves because the provider rejected its requests; the Ollama models ran on a laptop CPU, so their latency is much higher than on a GPU, and Clef Flash was too big for the laptop's memory, so none of its calls succeeded.
 
 ## Project structure
 
